@@ -1,0 +1,138 @@
+{
+    "sourceFile": "src/templates/admincategorie.phtml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1678280271457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678280297257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,9 @@\n </head>\n <body>\n <h1 class=\"text-center\" style=\"background-color:red\">ADMIN CRUD</h1>\n     <div class=\"container\">\n-        <div class=\"sucess\">\n-            <h1 class=\"mt-3 \">Bienvenue !<?php echo $_SESSION['user']['prenom']?> <a class=\"btn btn-danger\"\n-                    href=\"index.php?action=logout\" style=\"float:right;padding:11px\">log out</a></h1>\n-\n-            <strong>\n-                <p class=\"mt-3\" style=\"color:green\">C'EST VOTRE ESPACE ADMIN.</p>\n-\n-            </strong>\n+       \n             <a class=\"btn btn-primary\" href=\"#\">list des categorie</a>\n             <a class=\"btn btn-primary\" href=\"#\"> list des posts</a>\n             <div class =\"container\" style=\"border:solid\" >\n             <table class=\"table caption-top\">\n"
+                },
+                {
+                    "date": 1678280307516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,9 @@\n <body>\n <h1 class=\"text-center\" style=\"background-color:red\">ADMIN CRUD</h1>\n     <div class=\"container\">\n        \n-            <a class=\"btn btn-primary\" href=\"#\">list des categorie</a>\n-            <a class=\"btn btn-primary\" href=\"#\"> list des posts</a>\n+         \n             <div class =\"container\" style=\"border:solid\" >\n             <table class=\"table caption-top\">\n                 <h1 class=\"text-center\">List of users</h1>\n                 <thead>\n"
+                },
+                {
+                    "date": 1678280312793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n        \n          \n             <div class =\"container\" style=\"border:solid\" >\n             <table class=\"table caption-top\">\n-                <h1 class=\"text-center\">List of users</h1>\n+                <h1 class=\"text-center\">List of categories</h1>\n                 <thead>\n                     <tr>\n                         <th scope=\"col\">ID</th>\n                         <th scope=\"col\">Prenom</th>\n"
+                },
+                {
+                    "date": 1678280319332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n                         <th scope=\"col\">Role</th>\n                         <th scope=\"col\">Action</th>\n                     </tr>\n                     <?php\n-                    foreach ($users as $user) {\n+                    foreach ($categories as $user) {\n                         ?>\n                         <tr>\n                             <td><?= $user['id']?></td>\n                             <td><?= $user['prenom']?></td> \n"
+                },
+                {
+                    "date": 1678280326251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n                         <th scope=\"col\">Role</th>\n                         <th scope=\"col\">Action</th>\n                     </tr>\n                     <?php\n-                    foreach ($categories as $user) {\n+                    foreach ($categories as $categorie) {\n                         ?>\n                         <tr>\n                             <td><?= $user['id']?></td>\n                             <td><?= $user['prenom']?></td> \n"
+                },
+                {
+                    "date": 1678280331485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n                     <?php\n                     foreach ($categories as $categorie) {\n                         ?>\n                         <tr>\n-                            <td><?= $user['id']?></td>\n+                            <td><?= $categorie['id']?></td>\n                             <td><?= $user['prenom']?></td> \n                             <td><?= $user['email']?></td>\n                             <td><?= $user['role']?></td>\n                            \n"
+                },
+                {
+                    "date": 1678280336880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,12 @@\n                     foreach ($categories as $categorie) {\n                         ?>\n                         <tr>\n                             <td><?= $categorie['id']?></td>\n-                            <td><?= $user['prenom']?></td> \n-                            <td><?= $user['email']?></td>\n-                            <td><?= $user['role']?></td>\n+                            <td><?= $categorie['prenom']?></td> \n+                            <td><?= $categorie['email']?></td>\n                            \n+                           \n                                  \n                             <td><a class=\"btn btn-success\" href=\"./../crud/modifiercrud.php?id=<?= $id['id'] ?>\">Modifier</a><a class=\"btn btn-danger\" href=\"./../crud/deletecrud.php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n                         </tr>\n                         </th>\n"
+                },
+                {
+                    "date": 1678280346801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,10 @@\n                     foreach ($categories as $categorie) {\n                         ?>\n                         <tr>\n                             <td><?= $categorie['id']?></td>\n-                            <td><?= $categorie['prenom']?></td> \n-                            <td><?= $categorie['email']?></td>\n+                            <td><?= $categorie['name']?></td> \n+                            <td><?= $categorie['descr']?></td>\n                            \n                            \n                                  \n                             <td><a class=\"btn btn-success\" href=\"./../crud/modifiercrud.php?id=<?= $id['id'] ?>\">Modifier</a><a class=\"btn btn-danger\" href=\"./../crud/deletecrud.php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n"
+                },
+                {
+                    "date": 1678280357016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 <h1 class=\"text-center\">List of categories</h1>\n                 <thead>\n                     <tr>\n                         <th scope=\"col\">ID</th>\n-                        <th scope=\"col\">Prenom</th>\n+                        <th scope=\"col\">Name</th>\n                         <th scope=\"col\">Email</th>\n                         <th scope=\"col\">Role</th>\n                         <th scope=\"col\">Action</th>\n                     </tr>\n@@ -30,9 +30,9 @@\n                         ?>\n                         <tr>\n                             <td><?= $categorie['id']?></td>\n                             <td><?= $categorie['name']?></td> \n-                            <td><?= $categorie['descr']?></td>\n+                            <td><?= $categorie['description']?></td>\n                            \n                            \n                                  \n                             <td><a class=\"btn btn-success\" href=\"./../crud/modifiercrud.php?id=<?= $id['id'] ?>\">Modifier</a><a class=\"btn btn-danger\" href=\"./../crud/deletecrud.php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n"
+                },
+                {
+                    "date": 1678280362580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 <thead>\n                     <tr>\n                         <th scope=\"col\">ID</th>\n                         <th scope=\"col\">Name</th>\n-                        <th scope=\"col\">Email</th>\n+                        <th scope=\"col\">descr</th>\n                         <th scope=\"col\">Role</th>\n                         <th scope=\"col\">Action</th>\n                     </tr>\n                     <?php\n"
+                },
+                {
+                    "date": 1678280370567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 <thead>\n                     <tr>\n                         <th scope=\"col\">ID</th>\n                         <th scope=\"col\">Name</th>\n-                        <th scope=\"col\">descr</th>\n+                        <th scope=\"col\">description</th>\n                         <th scope=\"col\">Role</th>\n                         <th scope=\"col\">Action</th>\n                     </tr>\n                     <?php\n"
+                },
+                {
+                    "date": 1678280381050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                             <td><?= $categorie['description']?></td>\n                            \n                            \n                                  \n-                            <td><a class=\"btn btn-success\" href=\"./../crud/modifiercrud.php?id=<?= $id['id'] ?>\">Modifier</a><a class=\"btn btn-danger\" href=\"./../crud/deletecrud.php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n+                            <td><a class=\"btn btn-danger\" href=\"./../crud/deletecrud.php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n                         </tr>\n                         </th>\n                     <?php\n                     }\n"
+                },
+                {
+                    "date": 1678280390177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n                     ?>\n                     </tbody>\n                     </tbody>\n             </table>\n-            <a class=\"btn btn-primary\" href=\"./../crud/ajoutercrud.php\">Ajouter un user</a>\n+            <a class=\"btn btn-primary\" href=\"./../crud/ajoutercrud.php\">Ajouter une categorie</a>\n         </div>\n \n \n \n"
+                },
+                {
+                    "date": 1678280682681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n                         <th scope=\"col\">Role</th>\n                         <th scope=\"col\">Action</th>\n                     </tr>\n                     <?php\n-                    foreach ($categories as $categorie) {\n+                    foreach($categories as $categorie) {\n                         ?>\n                         <tr>\n                             <td><?= $categorie['id']?></td>\n                             <td><?= $categorie['name']?></td> \n"
+                },
+                {
+                    "date": 1678280692257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n                     <tr>\n                         <th scope=\"col\">ID</th>\n                         <th scope=\"col\">Name</th>\n                         <th scope=\"col\">description</th>\n-                        <th scope=\"col\">Role</th>\n+                        \n                         <th scope=\"col\">Action</th>\n                     </tr>\n                     <?php\n                     foreach($categories as $categorie) {\n"
+                },
+                {
+                    "date": 1678454361273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n                     ?>\n                     </tbody>\n                     </tbody>\n             </table>\n-            <a class=\"btn btn-primary\" href=\"./../crud/ajoutercrud.php\">Ajouter une categorie</a>\n+            <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n \n \n"
+                },
+                {
+                    "date": 1678456127203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                             <td><?= $categorie['description']?></td>\n                            \n                            \n                                  \n-                            <td><a class=\"btn btn-danger\" href=\"./../crud/deletecrud.php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n+                            <td><a class=\"btn btn-danger\" href=\".php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n                         </tr>\n                         </th>\n                     <?php\n                     }\n"
+                },
+                {
+                    "date": 1678456132393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                             <td><?= $categorie['description']?></td>\n                            \n                            \n                                  \n-                            <td><a class=\"btn btn-danger\" href=\".php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n+                            <td><a class=\"btn btn-danger\" href=\".php?id=<?= $categorie['id'] ?>\">Supprimer</a></td>\n                         </tr>\n                         </th>\n                     <?php\n                     }\n"
+                },
+                {
+                    "date": 1678456145144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                             <td><?= $categorie['description']?></td>\n                            \n                            \n                                  \n-                            <td><a class=\"btn btn-danger\" href=\".php?id=<?= $categorie['id'] ?>\">Supprimer</a></td>\n+                            <td><a class=\"btn btn-danger\" href=\"index.php?action=id=<?= $categorie['id'] ?>\">Supprimer</a></td>\n                         </tr>\n                         </th>\n                     <?php\n                     }\n"
+                },
+                {
+                    "date": 1678456151331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                             <td><?= $categorie['description']?></td>\n                            \n                            \n                                  \n-                            <td><a class=\"btn btn-danger\" href=\"index.php?action=id=<?= $categorie['id'] ?>\">Supprimer</a></td>\n+                            <td><a class=\"btn btn-danger\" href=\"index.php?action=supcat&id=<?= $categorie['id'] ?>\">Supprimer</a></td>\n                         </tr>\n                         </th>\n                     <?php\n                     }\n"
+                },
+                {
+                    "date": 1678460211792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n+<di\n \n \n-\n </body>\n </html>\n"
+                },
+                {
+                    "date": 1678460222080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n-<di\n+<\n \n \n </body>\n </html>\n"
+                },
+                {
+                    "date": 1678460228387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,11 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n-<\n+<div>\n+<a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n+</div>\n \n \n </body>\n </html>\n"
+                },
+                {
+                    "date": 1678460241672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n <div>\n-<a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n+<a class=\"btn btn-primary\" href=\"index.php?action=admin\">back</a>\n </div>\n \n \n </body>\n"
+                },
+                {
+                    "date": 1678460252852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n <div>\n-<a class=\"btn btn-primary\" href=\"index.php?action=admin\">back</a>\n+<a class=\"btn btn-primary\" href=\"index.php?action=dmin\">back</a>\n </div>\n \n \n </body>\n"
+                },
+                {
+                    "date": 1678460263546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n-<div>\n-<a class=\"btn btn-primary\" href=\"index.php?action=dmin\">back</a>\n+<div class =\"container\">\n+<a class=\"btn btn-primary\" href=\"index.php?action=Admin\">back</a>\n </div>\n \n \n </body>\n"
+                },
+                {
+                    "date": 1678460280278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n-<div class =\"container\">\n+<div class =\"container\" style=\">\n <a class=\"btn btn-primary\" href=\"index.php?action=Admin\">back</a>\n </div>\n \n \n"
+                },
+                {
+                    "date": 1678460285339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n-<div class =\"container\" style=\">\n+<div class =\"container\" style=\"padding:>\n <a class=\"btn btn-primary\" href=\"index.php?action=Admin\">back</a>\n </div>\n \n \n"
+                },
+                {
+                    "date": 1678460291301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n-<div class =\"container\" style=\"padding:>\n+<div class =\"container\" style=\"padding:4p>\n <a class=\"btn btn-primary\" href=\"index.php?action=Admin\">back</a>\n </div>\n \n \n"
+                },
+                {
+                    "date": 1678460306880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             </table>\n             <a class=\"btn btn-primary\" href=\"index.php?action=cat\">Ajouter une categorie</a>\n         </div>\n \n-<div class =\"container\" style=\"padding:1px;\">\n+<div class =\"container\" style=\"padding:10px;\">\n <a class=\"btn btn-primary\" href=\"index.php?action=Admin\">back</a>\n </div>\n \n \n"
+                }
+            ],
+            "date": 1678280271457,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js\" integrity=\"sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js\" integrity=\"sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF\" crossorigin=\"anonymous\"></script>\n</head>\n<body>\n<h1 class=\"text-center\" style=\"background-color:red\">ADMIN CRUD</h1>\n    <div class=\"container\">\n        <div class=\"sucess\">\n            <h1 class=\"mt-3 \">Bienvenue !<?php echo $_SESSION['user']['prenom']?> <a class=\"btn btn-danger\"\n                    href=\"index.php?action=logout\" style=\"float:right;padding:11px\">log out</a></h1>\n\n            <strong>\n                <p class=\"mt-3\" style=\"color:green\">C'EST VOTRE ESPACE ADMIN.</p>\n\n            </strong>\n            <a class=\"btn btn-primary\" href=\"#\">list des categorie</a>\n            <a class=\"btn btn-primary\" href=\"#\"> list des posts</a>\n            <div class =\"container\" style=\"border:solid\" >\n            <table class=\"table caption-top\">\n                <h1 class=\"text-center\">List of users</h1>\n                <thead>\n                    <tr>\n                        <th scope=\"col\">ID</th>\n                        <th scope=\"col\">Prenom</th>\n                        <th scope=\"col\">Email</th>\n                        <th scope=\"col\">Role</th>\n                        <th scope=\"col\">Action</th>\n                    </tr>\n                    <?php\n                    foreach ($users as $user) {\n                        ?>\n                        <tr>\n                            <td><?= $user['id']?></td>\n                            <td><?= $user['prenom']?></td> \n                            <td><?= $user['email']?></td>\n                            <td><?= $user['role']?></td>\n                           \n                                 \n                            <td><a class=\"btn btn-success\" href=\"./../crud/modifiercrud.php?id=<?= $id['id'] ?>\">Modifier</a><a class=\"btn btn-danger\" href=\"./../crud/deletecrud.php?id=<?= $id['id'] ?>\">Supprimer</a></td>\n                        </tr>\n                        </th>\n                    <?php\n                    }\n                    ?>\n                    </tbody>\n                    </tbody>\n            </table>\n            <a class=\"btn btn-primary\" href=\"./../crud/ajoutercrud.php\">Ajouter un user</a>\n        </div>\n\n\n\n\n</body>\n</html>\n"
+        }
+    ]
+}

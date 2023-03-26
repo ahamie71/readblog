@@ -1,0 +1,242 @@
+{
+    "sourceFile": "src/controllers/admincontroller.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 56,
+            "patches": [
+                {
+                    "date": 1678269586600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678269593888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+<?php \n+\n+function \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678269601420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php \n \n-function \n\\ No newline at end of file\n+function AdminPage()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678269623418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n <?php \n \n-function AdminPage()\n\\ No newline at end of file\n+function AdminPage(){\n+ \n+    require_once(dirname(__FILE__, 2) . '/templates/homepage.phtml');\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678269718448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n \n function AdminPage(){\n  \n-    require_once(dirname(__FILE__, 2) . '/templates/homepage.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/hpage.phtml');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678269727932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n \n function AdminPage(){\n  \n-    require_once(dirname(__FILE__, 2) . '/templates/hpage.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678269735472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n \n function AdminPage(){\n- \n+    \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678271959216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n function AdminPage(){\n     \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n-}\n\\ No newline at end of file\n+}\n+\n"
+                },
+                {
+                    "date": 1678271966012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,5 @@\n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n \n+function add\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678271984738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,9 @@\n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n \n-function add\n\\ No newline at end of file\n+function adduser(){\n+\n+\n+    \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272142017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,10 @@\n }\n \n function adduser(){\n \n+    \n+   \n \n-    \n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272351258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n \n-function adduser(){\n+function afficheuser(){\n \n-    \n+\n    \n \n \n \n"
+                },
+                {
+                    "date": 1678272388718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,11 @@\n \n }\n \n function afficheuser(){\n+ \n+    \n \n-\n    \n \n \n \n"
+                },
+                {
+                    "date": 1678272395529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,19 @@\n <?php \n \n+\n+session_start();\n+require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+\n+   \n function AdminPage(){\n     \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n \n function afficheuser(){\n  \n-    \n \n-   \n \n \n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272450424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,15 @@\n require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n \n    \n function AdminPage(){\n-    \n-    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+       require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n \n function afficheuser(){\n  \n+    \n \n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272458119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n \n function afficheuser(){\n  \n-    \n+   $users=  \n \n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272492168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,11 @@\n }\n \n function afficheuser(){\n  \n-   $users=  \n+   $users= SelectAllUsers()\n+  \n+   \n \n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272498159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,11 @@\n \n }\n \n function afficheuser(){\n+    \n  \n-   $users= SelectAllUsers()\n+   $users= SelectAllUsers();\n   \n    \n \n \n"
+                },
+                {
+                    "date": 1678272504042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n <?php \n \n \n session_start();\n-require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+require_once(dirname(__FILE__, 2) . '/Model/users.php');\n \n    \n function AdminPage(){\n        require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n \n function afficheuser(){\n-    \n+\n  \n    $users= SelectAllUsers();\n   \n    \n"
+                },
+                {
+                    "date": 1678272515646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\n \n function afficheuser(){\n \n- \n+  \n    $users= SelectAllUsers();\n   \n    \n \n"
+                },
+                {
+                    "date": 1678272522722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n function afficheuser(){\n \n   \n    $users= SelectAllUsers();\n+   \n   \n    \n \n \n"
+                },
+                {
+                    "date": 1678272527870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n function afficheuser(){\n \n   \n    $users= SelectAllUsers();\n-   \n+   require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n   \n    \n \n \n"
+                },
+                {
+                    "date": 1678272534740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,8 @@\n }\n \n function afficheuser(){\n \n-  \n    $users= SelectAllUsers();\n    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-  \n-   \n \n-\n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272847407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n \n    \n function AdminPage(){\n        require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-\n }\n \n function afficheuser(){\n \n"
+                },
+                {
+                    "date": 1678272857555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \n    \n function AdminPage(){\n        require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+       \n }\n \n function afficheuser(){\n \n"
+                },
+                {
+                    "date": 1678272862889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n    \n function AdminPage(){\n        require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-       \n+       afficheuser()\n }\n \n function afficheuser(){\n \n"
+                },
+                {
+                    "date": 1678272886250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,7 @@\n \n    \n function AdminPage(){\n        require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-       afficheuser()\n+       afficheuser();\n }\n \n-function afficheuser(){\n-\n-   $users= SelectAllUsers();\n-   require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-\n\\ No newline at end of file\n-}\n"
+                },
+                {
+                    "date": 1678272895923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,13 @@\n \n    \n function AdminPage(){\n        require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-       afficheuser();\n+       afficheuser()\n }\n \n+function afficheuser(){\n+\n+   $users= SelectAllUsers();\n+   require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272901039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,13 @@\n \n    \n function AdminPage(){\n        require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-       afficheuser()\n+       \n }\n \n function afficheuser(){\n-\n+    \n    $users= SelectAllUsers();\n    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272955296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,20 @@\n-<?php \n+<?php\n \n \n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n \n-   \n-function AdminPage(){\n-       require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-       \n+\n+function AdminPage()\n+{\n+    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+\n }\n \n-function afficheuser(){\n-    \n-   $users= SelectAllUsers();\n-   require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+function afficheuser()\n+{\n \n+    $users = SelectAllUsers();\n+    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678273011157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n function AdminPage()\n {\n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-\n+     \n }\n \n function afficheuser()\n {\n"
+                },
+                {
+                    "date": 1678273070006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,8 @@\n \n \n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n-\n-\n function AdminPage()\n {\n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n      \n"
+                },
+                {
+                    "date": 1678273083807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,4 @@\n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n      \n }\n \n-function afficheuser()\n-{\n-\n-    $users = SelectAllUsers();\n-    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678273100965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n function AdminPage()\n {\n+    \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+\n      \n }\n \n"
+                },
+                {
+                    "date": 1678273106671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n function AdminPage()\n {\n-    \n+    $users\n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n      \n }\n"
+                },
+                {
+                    "date": 1678273115934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n function AdminPage()\n {\n-    $users\n+    $users=SelectAllUsers \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n      \n }\n"
+                },
+                {
+                    "date": 1678273128001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n function AdminPage()\n {\n-    $users=SelectAllUsers \n+    $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n      \n }\n"
+                },
+                {
+                    "date": 1678273149624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n function AdminPage()\n-{\n+{    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n      \n"
+                },
+                {
+                    "date": 1678273178933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-\n+    \n      \n }\n \n"
+                },
+                {
+                    "date": 1678278835659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n     \n+    \n      \n }\n \n"
+                },
+                {
+                    "date": 1678278842845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+    $categories=SelectAllCategories();\n     \n-    \n      \n }\n \n"
+                },
+                {
+                    "date": 1678278847951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-    $categories=SelectAllCategories();\n+    $categories=get();\n     \n      \n }\n \n"
+                },
+                {
+                    "date": 1678279191941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n <?php\n \n \n session_start();\n-require_once(dirname(__FILE__, 2) . '/Model/users.php');\n+\n+\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-    $categories=get();\n+    $categories=getCategory();\n     \n      \n }\n \n"
+                },
+                {
+                    "date": 1678279198435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <?php\n \n \n session_start();\n-\n-\n+require_once(dirname(__FILE__, 2) . '/Model/users.php');\n+require_once(dirname(__FILE__, 2) . '/Model/users.php');\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n"
+                },
+                {
+                    "date": 1678279255112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,14 @@\n \n \n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n-require_once(dirname(__FILE__, 2) . '/Model/users.php');\n+require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279274247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+   \n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279312299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-   \n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279324796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279331050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n \n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/users.php');\n-require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n"
+                },
+                {
+                    "date": 1678279527540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+  \n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279539871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-  \n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279548559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+    require_once(dirname(__FILE__, 2) . '/Model/users.php');\n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279554246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-    require_once(dirname(__FILE__, 2) . '/Model/users.php');\n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $categories=getCategory();\n     \n      \n }\n"
+                },
+                {
+                    "date": 1678279673610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n     $categories=getCategory();\n     \n      \n }\n-\n+function \n"
+                },
+                {
+                    "date": 1678279680490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,7 @@\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n-    $categories=getCategory();\n-    \n-     \n+    $categories=getCategory();    \n }\n-function \n+\n"
+                },
+                {
+                    "date": 1678279971440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n-   \n+}\n \n"
+                },
+                {
+                    "date": 1678283188661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         $email = $_POST['email'];\n         $password = $_POST['password'];\n         $role = \"user\";\n          $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-        registerUser( $prenom, $,  $email,  $role);\n+        registerUser( $prenom, $p,  $email,  $role);\n             \n         }\n         \n   \n"
+                }
+            ],
+            "date": 1678269586600,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

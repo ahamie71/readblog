@@ -1,0 +1,250 @@
+{
+    "sourceFile": "src/controllers/postscontroller.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 58,
+            "patches": [
+                {
+                    "date": 1677839849848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677839869346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n- \n \n+function \n \n \n+\n"
+                },
+                {
+                    "date": 1677839880614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function \n+function createArticles()\n \n \n \n"
+                },
+                {
+                    "date": 1677839939672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function createArticles()\n \n \n \n+\n"
+                },
+                {
+                    "date": 1677839948370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,23 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n+function addPost()\n+{   \n+    if (isset($_POST['content'])) {\n+        $content = $_POST['content'];\n+        $createdAt = date('Y-m-d H:i:s');\n+        $user_id = $_SESSION['user']['id'];\n+    } else {\n+        die(\"Please enter a message\");\n+    }\n+    require_once(dirname(__FILE__, 2) . '/Model/message.php');\n+    addMsg($content, $createdAt, $user_id, );\n+    header(\"location:index.php?action=Discuss\");\n+    exit();\n \n+}\n \n \n \n+\n"
+                },
+                {
+                    "date": 1677839961572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     } else {\n         die(\"Please enter a message\");\n     }\n     require_once(dirname(__FILE__, 2) . '/Model/message.php');\n-    addMsg($content, $createdAt, $user_id, );\n+    creat($content, $createdAt, $user_id, );\n     header(\"location:index.php?action=Discuss\");\n     exit();\n \n }\n"
+                },
+                {
+                    "date": 1677839970986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     } else {\n         die(\"Please enter a message\");\n     }\n     require_once(dirname(__FILE__, 2) . '/Model/message.php');\n-    creat($content, $createdAt, $user_id, );\n+    createPost($content, $createdAt, $user_id, );\n     header(\"location:index.php?action=Discuss\");\n     exit();\n \n }\n"
+                },
+                {
+                    "date": 1677839989564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n     } else {\n         die(\"Please enter a message\");\n     }\n     require_once(dirname(__FILE__, 2) . '/Model/message.php');\n-    createPost($content, $createdAt, $user_id, );\n+    createPost()\n+    { );\n     header(\"location:index.php?action=Discuss\");\n     exit();\n \n }\n"
+                },
+                {
+                    "date": 1677840008955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,9 @@\n     } else {\n         die(\"Please enter a message\");\n     }\n     require_once(dirname(__FILE__, 2) . '/Model/message.php');\n-    createPost()\n-    { );\n+    createPost($userid, $title, $content, $image,$catregory_id );\n     header(\"location:index.php?action=Discuss\");\n     exit();\n \n }\n"
+                },
+                {
+                    "date": 1677840039292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,22 +8,9 @@\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n function addPost()\n-{   \n-    if (isset($_POST['content'])) {\n-        $content = $_POST['content'];\n-        $createdAt = date('Y-m-d H:i:s');\n-        $user_id = $_SESSION['user']['id'];\n-    } else {\n-        die(\"Please enter a message\");\n-    }\n-    require_once(dirname(__FILE__, 2) . '/Model/message.php');\n-    createPost($userid, $title, $content, $image,$catregory_id );\n-    header(\"location:index.php?action=Discuss\");\n-    exit();\n \n-}\n \n \n \n \n"
+                },
+                {
+                    "date": 1677840048317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,13 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function addPost()\n+function addPost(){\n \n+    \n+}\n \n \n \n \n+\n"
+                },
+                {
+                    "date": 1677840075190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,9 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function addPost(){\n \n-    \n-}\n \n \n \n \n"
+                },
+                {
+                    "date": 1677840083251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,19 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n+function create($userid, $title, $content, $image)\n+{\n+    global $pdo;\n+    $query = $pdo->prepare('INSERT INTO posts (userid,title, content, image,created_at,)VALUES(:userid,:titre,:contenu,:image,NOW())');\n+    $query->execute([\n+        ':auteur' => $userid,\n+        ':titre' => $title,\n+        ':contenu' => $content,\n+        ':image' => $image\n+    ]);\n \n+}\n \n \n \n-\n-\n"
+                },
+                {
+                    "date": 1677840102230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,19 +7,8 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function create($userid, $title, $content, $image)\n-{\n-    global $pdo;\n-    $query = $pdo->prepare('INSERT INTO posts (userid,title, content, image,created_at,)VALUES(:userid,:titre,:contenu,:image,NOW())');\n-    $query->execute([\n-        ':auteur' => $userid,\n-        ':titre' => $title,\n-        ':contenu' => $content,\n-        ':image' => $image\n-    ]);\n \n-}\n \n \n \n"
+                },
+                {
+                    "date": 1677857538806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n+function \n \n \n \n-\n"
+                },
+                {
+                    "date": 1677857546969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function \n+function getCategory\n \n \n \n"
+                },
+                {
+                    "date": 1677857554236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,11 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function getCategory\n+function getCategory(){\n \n+    \n+}\n \n \n+\n"
+                },
+                {
+                    "date": 1677857559863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n \n function getCategory(){\n \n     \n+\n }\n \n \n \n"
+                },
+                {
+                    "date": 1677858044042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,16 @@\n {\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n+    $\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n function getCategory(){\n \n-    \n \n+\n }\n \n \n \n"
+                },
+                {
+                    "date": 1677858054473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n {\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n-    $\n+    $categorie\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n function getCategory(){\n"
+                },
+                {
+                    "date": 1677858063094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n {\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n-    $categorie\n+    $categories = getCategori();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n function getCategory(){\n"
+                },
+                {
+                    "date": 1677858072211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n {\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n-    $categories = getCategori();\n+    $categories = getCatego();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n function getCategory(){\n"
+                },
+                {
+                    "date": 1677858148225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,10 @@\n {\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n-    $categories = getCatego();\n+    $categories = getCategory();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n-function getCategory(){\n \n \n-\n-}\n-\n-\n-\n"
+                },
+                {
+                    "date": 1677860887608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n {\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n-    $categories = getCategory();\n+    \n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n \n"
+                },
+                {
+                    "date": 1677861810559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n {\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n-    \n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n \n \n"
+                },
+                {
+                    "date": 1677862028608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n+f\n \n \n-\n"
+                },
+                {
+                    "date": 1677862037304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n-f\n+finction \n \n \n"
+                },
+                {
+                    "date": 1677862044431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n-finction \n+function \n \n \n"
+                },
+                {
+                    "date": 1677862051077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n-function \n+function addArticle()\n \n \n"
+                },
+                {
+                    "date": 1677862064322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,11 @@\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n-function addArticle()\n+function addArticle(){\n \n+    \n+}\n \n+\n+\n"
+                },
+                {
+                    "date": 1677862081532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,12 @@\n     $articles = getPosts();\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n function addArticle(){\n+  \n+    require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n \n-    \n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862120862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-\n+    createPost($userid, $title, $content, $image,$catregory_id)\n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862131768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-    createPost($userid, $title, $content, $image,$catregory_id)\n+    createPost($userid, $title, $content, $image,$catregory_id);\n+    header\n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862138090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n     createPost($userid, $title, $content, $image,$catregory_id);\n-    header\n+    header('Location:')\n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862147186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n     createPost($userid, $title, $content, $image,$catregory_id);\n-    header('Location:')\n+    header('Location:index.php?action');\n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862447373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-    createPost($userid, $title, $content, $image,$catregory_id);\n-    header('Location:index.php?action');\n+    createPost()\n+    header('Location:index.php?action=addArticle');\n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862456980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-    createPost()\n+    \n     header('Location:index.php?action=addArticle');\n }\n \n \n"
+                },
+                {
+                    "date": 1677862466719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n     \n-    header('Location:index.php?action=addArticle');\n+    \n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862473002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n+    require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n     \n-    \n }\n \n \n \n"
+                },
+                {
+                    "date": 1677862481874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-    require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n+    require_once(dirname(__FILE__, 2) . '/templates/Aposts.php');\n     \n }\n \n \n"
+                },
+                {
+                    "date": 1677862554311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-    require_once(dirname(__FILE__, 2) . '/templates/Aposts.php');\n+    require_once(dirname(__FILE__, 2) . '/templates/addpostposts.phtml');\n     \n }\n \n \n"
+                },
+                {
+                    "date": 1677862569360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n function addArticle(){\n   \n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-    require_once(dirname(__FILE__, 2) . '/templates/addpostposts.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n \n \n"
+                },
+                {
+                    "date": 1677862595018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n     require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n }\n function addArticle(){\n   \n-    require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n     require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n"
+                },
+                {
+                    "date": 1677880051049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,7 @@\n     require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n \n+function get\n \n \n"
+                },
+                {
+                    "date": 1677880064710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n     require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n \n-function get\n+function getArticle()\n \n \n"
+                },
+                {
+                    "date": 1677880074128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,16 @@\n     require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n \n-function getArticle()\n+function getArticleByid(){\n \n+    $id= '';\n+if(isset($_GET['id']) && is_numeric($_GET['id'])){\n+   $id = $_GET['id'];\n+}\n+if(empty($_GET['id'])){\n+   die(\"cet article nexiste pas \");\n+}\n+}\n \n+\n"
+                },
+                {
+                    "date": 1677880081850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n }\n \n function getArticleByid(){\n \n-    $id= '';\n+    \n if(isset($_GET['id']) && is_numeric($_GET['id'])){\n    $id = $_GET['id'];\n }\n if(empty($_GET['id'])){\n"
+                },
+                {
+                    "date": 1677880089049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n }\n \n function getArticleByid(){\n \n-    \n+    $id= '';\n if(isset($_GET['id']) && is_numeric($_GET['id'])){\n    $id = $_GET['id'];\n }\n if(empty($_GET['id'])){\n"
+                },
+                {
+                    "date": 1677880101548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,9 @@\n }\n if(empty($_GET['id'])){\n    die(\"cet article nexiste pas \");\n }\n+\n+\n }\n \n \n"
+                },
+                {
+                    "date": 1677880108132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n }\n if(empty($_GET['id'])){\n    die(\"cet article nexiste pas \");\n }\n+ \n+$post\n \n-\n }\n \n \n"
+                },
+                {
+                    "date": 1677880113553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n if(empty($_GET['id'])){\n    die(\"cet article nexiste pas \");\n }\n  \n-$post\n+$post= $\n \n }\n \n \n"
+                },
+                {
+                    "date": 1677880205542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,17 +15,11 @@\n }\n \n function getArticleByid(){\n \n-    $id= '';\n-if(isset($_GET['id']) && is_numeric($_GET['id'])){\n-   $id = $_GET['id'];\n-}\n-if(empty($_GET['id'])){\n-   die(\"cet article nexiste pas \");\n-}\n+   \n  \n-$post= $\n \n+\n }\n \n \n"
+                },
+                {
+                    "date": 1677880210637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,10 @@\n     require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n \n-function getArticleByid(){\n+function (){\n \n-   \n- \n \n-\n }\n \n \n"
+                },
+                {
+                    "date": 1677880215712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n \n-function (){\n+function Display(){\n \n \n }\n \n"
+                },
+                {
+                    "date": 1677880225695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     require_once(dirname(__FILE__, 2) . '/templates/addpost.phtml');\n     \n }\n \n-function Display(){\n+function DisplayOnePost(){\n \n \n }\n \n"
+                },
+                {
+                    "date": 1677880233773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,11 @@\n }\n \n function DisplayOnePost(){\n \n+    $id = $_GET['messageid'];\n+        require_once(dirname(__FILE__, 2) . '/Model/message.php');\n+        $message = getMessa($_GET['messageid']);\n \n }\n \n \n"
+                },
+                {
+                    "date": 1677880238922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n }\n \n function DisplayOnePost(){\n \n-    $id = $_GET['messageid'];\n+    $id = $_GET['postid'];\n         require_once(dirname(__FILE__, 2) . '/Model/message.php');\n         $message = getMessa($_GET['messageid']);\n \n }\n"
+                },
+                {
+                    "date": 1677880250945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n function DisplayOnePost(){\n \n     $id = $_GET['postid'];\n         require_once(dirname(__FILE__, 2) . '/Model/message.php');\n-        $ = get($_GET['messageid']);\n+        $a = get($_GET['messageid']);\n \n }\n \n \n"
+                },
+                {
+                    "date": 1677884905271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n function DisplayOnePost(){    \n if(isset($_GET['id']) && is_numeric($_GET['id'])){ \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n    $id = $_GET['id'];\n-   $posts= \n+   $posts=\n \n }\n \n \n"
+                }
+            ],
+            "date": 1677839849848,
+            "name": "Commit-0",
+            "content": "<?php\nsession_start();\nfunction getarticle()\n{\n    require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n    $articles = getPosts();\n    require_once(dirname(__FILE__, 2) . '/templates/displayposts.php');\n}\n \n\n\n\n"
+        }
+    ]
+}

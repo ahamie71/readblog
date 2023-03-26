@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/Model/articles.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1677839321671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677839334873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,16 @@\n  include('database.php')\n   \n ;\n \n-\n+$sql = \"SELECT u.name ,m.id,m.content,m.createdAt,m.user_id\n+        FROM messages m \n+        JOIN user u ON m.user_id= u.id\n+        ORDER BY m.createdAt DESC\n+        LIMIT 0 OFFSET $offset\";\n+$messageStatement = $db->prepare($sql);\n+$messageStatement->execute();\n+$messages = $messageStatement->fetchAll();\n function getPosts()\n {\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM posts \");\n"
+                },
+                {
+                    "date": 1677839343115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n $sql = \"SELECT u.name ,m.id,m.content,m.createdAt,m.user_id\n         FROM messages m \n         JOIN user u ON m.user_id= u.id\n         ORDER BY m.createdAt DESC\n-        LIMIT 0 OFFSET $offset\";\n+        LIMIT 0  3\";\n $messageStatement = $db->prepare($sql);\n $messageStatement->execute();\n $messages = $messageStatement->fetchAll();\n function getPosts()\n"
+                },
+                {
+                    "date": 1677839381047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n  include('database.php')\n   \n ;\n \n-$sql = \"SELECT u.name ,m.id,m.content,m.createdAt,m.user_id\n+$sql = \"SELECT u. ,m.id,m.content,m.createdAt,m.user_id\n         FROM messages m \n         JOIN user u ON m.user_id= u.id\n         ORDER BY m.createdAt DESC\n-        LIMIT 0  3\";\n+        LIMIT 0 OFFSET 3\";\n $messageStatement = $db->prepare($sql);\n $messageStatement->execute();\n $messages = $messageStatement->fetchAll();\n function getPosts()\n"
+                },
+                {
+                    "date": 1677839393157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n  include('database.php')\n   \n ;\n \n-$sql = \"SELECT u. ,m.id,m.content,m.createdAt,m.user_id\n+$sql = \"SELECT u.prenom ,p.id,m.content,m.createdAt,m.user_id\n         FROM messages m \n         JOIN user u ON m.user_id= u.id\n         ORDER BY m.createdAt DESC\n         LIMIT 0 OFFSET 3\";\n"
+                },
+                {
+                    "date": 1677839402039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n  include('database.php')\n   \n ;\n \n-$sql = \"SELECT u.prenom ,p.id,m.content,m.createdAt,m.user_id\n+$sql = \"SELECT u.prenom ,p.id,.content,m.createdAt,m.user_id\n         FROM messages m \n         JOIN user u ON m.user_id= u.id\n         ORDER BY m.createdAt DESC\n         LIMIT 0 OFFSET 3\";\n"
+                },
+                {
+                    "date": 1677839417349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n  include('database.php')\n   \n ;\n \n-$sql = \"SELECT u.prenom ,p.id,.content,m.createdAt,m.user_id\n+$sql = \"SELECT u.prenom ,p.id,p.content,p.createdAt,p.user_id\n         FROM messages m \n         JOIN user u ON m.user_id= u.id\n         ORDER BY m.createdAt DESC\n         LIMIT 0 OFFSET 3\";\n"
+                },
+                {
+                    "date": 1677839424022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \n ;\n \n $sql = \"SELECT u.prenom ,p.id,p.content,p.createdAt,p.user_id\n-        FROM messages m \n+        FROM posts m \n         JOIN user u ON m.user_id= u.id\n         ORDER BY m.createdAt DESC\n         LIMIT 0 OFFSET 3\";\n $messageStatement = $db->prepare($sql);\n"
+                },
+                {
+                    "date": 1677839433787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n   \n ;\n \n $sql = \"SELECT u.prenom ,p.id,p.content,p.createdAt,p.user_id\n-        FROM posts m \n-        JOIN user u ON m.user_id= u.id\n+        FROM posts p\n+        JOIN users u ON m.user_id= u.id\n         ORDER BY m.createdAt DESC\n         LIMIT 0 OFFSET 3\";\n $messageStatement = $db->prepare($sql);\n $messageStatement->execute();\n"
+                },
+                {
+                    "date": 1677839440456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n ;\n \n $sql = \"SELECT u.prenom ,p.id,p.content,p.createdAt,p.user_id\n         FROM posts p\n-        JOIN users u ON m.user_id= u.id\n+        JOIN users u ON o.user_id= u.id\n         ORDER BY m.createdAt DESC\n         LIMIT 0 OFFSET 3\";\n $messageStatement = $db->prepare($sql);\n $messageStatement->execute();\n"
+                },
+                {
+                    "date": 1677839449061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,8 @@\n  include('database.php')\n   \n ;\n \n-$sql = \"SELECT u.prenom ,p.id,p.content,p.createdAt,p.user_id\n-        FROM posts p\n-        JOIN users u ON o.user_id= u.id\n-        ORDER BY m.createdAt DESC\n-        LIMIT 0 OFFSET 3\";\n-$messageStatement = $db->prepare($sql);\n-$messageStatement->execute();\n-$messages = $messageStatement->fetchAll();\n function getPosts()\n {\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM posts \");\n"
+                },
+                {
+                    "date": 1677839610057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,4 +25,14 @@\n     }\n     return $articles;\n }\n \n+unction create($userid, $title, $content, $image)\n+{\n+    global $pdo;\n+    $query = $pdo->prepare('INSERT INTO posts (userid,title, content, image,created_at,)VALUES(:userid,:titre,:contenu,:image,NOW())');\n+    $query->execute([\n+        ':auteur' => $userid,\n+        ':titre' => $title,\n+        ':contenu' => $content,\n+        ':image' => $image\n+    ]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677860325499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n ;\n function getPosts()\n {\n     $db = connectionDataBase();\n-    $stmt = $db->prepare(\"SELECT *  \");\n+    $stmt = $db->prepare(\"SELECT * F \");\n     $stmt->execute();\n     $articles= [];\n     while (($row = $stmt->fetch())) {\n         $posts = [\n"
+                }
+            ],
+            "date": 1677839321671,
+            "name": "Commit-0",
+            "content": "<?php\n include('database.php')\n  \n;\n\n\nfunction getPosts()\n{\n    $db = connectionDataBase();\n    $stmt = $db->prepare(\"SELECT * FROM posts \");\n    $stmt->execute();\n    $articles= [];\n    while (($row = $stmt->fetch())) {\n        $posts = [\n\n            'content' => $row['content'],\n            'created_at' => $row['created_at'],\n            'id' => $row['id'],\n            'user_id' => $row['user_id'],\n            'category_id' => $row['category_id'],\n            'title'=>$row['title'],\n            'image' => $row['image'],\n\n        ];\n        $articles[] = $posts;\n    }\n    return $articles;\n}"
+        }
+    ]
+}

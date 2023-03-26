@@ -1,0 +1,262 @@
+{
+    "sourceFile": "src/templates/displayOnepost.phtml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 61,
+            "patches": [
+                {
+                    "date": 1677879589408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677879594875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n require_once 'refactoring.php';\n include('traitement.php');\n // Selection d'un article  grace à un id \n \n-$post = selectOne($id);\n+$post = g($id);\n $comments= findAllComments($id);\n \n \n ?>\n"
+                },
+                {
+                    "date": 1677879601371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n require_once 'refactoring.php';\n include('traitement.php');\n // Selection d'un article  grace à un id \n \n-$post = g($id);\n+$post = getPOST($id);\n $comments= findAllComments($id);\n \n \n ?>\n"
+                },
+                {
+                    "date": 1677879609133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n require_once 'refactoring.php';\n include('traitement.php');\n // Selection d'un article  grace à un id \n \n-$post = getPOST($id);\n-$comments= findAllComments($id);\n \n \n+\n+\n ?>\n \n <!DOCTYPE html>\n <html lang=\"en\">\n"
+                },
+                {
+                    "date": 1677879617069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,6 @@\n-<?php \n-require_once 'refactoring.php';\n-include('traitement.php');\n-// Selection d'un article  grace à un id \n \n \n-\n-\n-\n-?>\n-\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677879625998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n \n-\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n@@ -15,9 +14,9 @@\n </head>\n \n <body>\n     <!-- Page header -->\n-   <?php include('inc/header.php'); ?>\n+  \n \n   <!-- Page Wrapper -->\n   <div class=\"page-container\">\n \n"
+                },
+                {
+                    "date": 1677879810431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,10 @@\n+<?php \n+require_once 'refactoring.php';\n+include('traitement.php');\n+// Selection d'un article  grace à un id \n \n+$post = selectOne($id);\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677879819830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n require_once 'refactoring.php';\n include('traitement.php');\n // Selection d'un article  grace à un id \n \n-$post = selectOne($id);\n+$post = sele($id);\n+?>\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677879825481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n require_once 'refactoring.php';\n include('traitement.php');\n // Selection d'un article  grace à un id \n \n-$post = sele($id);\n+$post = getPost($id);\n ?>\n <!DOCTYPE html>\n <html lang=\"en\">\n \n"
+                },
+                {
+                    "date": 1677879832184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <?php \n require_once 'refactoring.php';\n-include('traitement.php');\n+\n // Selection d'un article  grace à un id \n \n-$post = getPost($id);\n+$post = getPostById($id);\n ?>\n <!DOCTYPE html>\n <html lang=\"en\">\n \n"
+                },
+                {
+                    "date": 1677879841199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-require_once 'refactoring.php';\n+require_once '';\n \n // Selection d'un article  grace à un id \n \n $post = getPostById($id);\n"
+                },
+                {
+                    "date": 1677879850598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-require_once '';\n+require_once './';\n \n // Selection d'un article  grace à un id \n \n $post = getPostById($id);\n"
+                },
+                {
+                    "date": 1677879858638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-require_once './';\n+require_once './Model/article.php';\n \n // Selection d'un article  grace à un id \n \n $post = getPostById($id);\n"
+                },
+                {
+                    "date": 1677884548002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,5 @@\n-<?php \n-require_once './Model/article.php';\n \n-// Selection d'un article  grace à un id \n-\n-$post = getPostById($id);\n-?>\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887243778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n             <?= $post['content']?>\n             <strong><?= $post['author']; ?>: publié le <?= $post['created_at']?></strong>\n           </div>\n         </div>\n-        <h1>Les commentaires</h1>\n+        <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n             <?php foreach( $comments as $comment ):?>\n \n             <div class=\"comment\">\n@@ -69,9 +69,9 @@\n         </form>\n         \n       </div>\n     </div>\n-  </div> \n+  </div>  -->\n       <!-- // Main Content\n \n      \n \n"
+                },
+                {
+                    "date": 1677887251404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,10 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post['author']; ?>: publié le <?= $post['created_at']?></strong>\n+            <strong><?= $post['\n+        ']; ?>: publié le <?= $post['created_at']?></strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887259895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,9 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post['\n-        ']; ?>: publié le <?= $post['created_at']?></strong>\n+            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?></strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887266727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?></strong>\n+            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la ca</strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887279148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la ca</strong>\n+            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la catgeorie </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887290044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la catgeorie </strong>\n+            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la catgeorie  </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887295971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la catgeorie  </strong>\n+            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post[' name']; ?> </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887303294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post[' name']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post[' name']; ?> </strong>\n+            <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887328942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n \n+\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887335642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \n-\n+<include\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887343132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-\n-<include\n+<php<?php\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887348349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-<php<?php\n+<php\n+include ''\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887372981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-<php\n-include ''\n+<?php\n+include 'display'\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887380169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n-include 'display'\n+include 'displayposts'\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887387852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n-include 'displayposts'\n+include 'displayposts.php';\n+?>\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887403460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n-<?php\n-include 'displayposts.php';\n-?>\n+\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887466277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n@@ -25,9 +24,9 @@\n \n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n-          <h1 class=\"post-title\"><?= $post['title']?></h1>\n+          <h1 class=\"post-title\"></h1>\n           <div class=\"post-image\">\n               <img src=\"images/<?=$post['image']; ?>\"alt=\"\" >\n           </div>\n         </br>\n"
+                },
+                {
+                    "date": 1677887474786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,15 +26,15 @@\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"></h1>\n           <div class=\"post-image\">\n-              <img src=\"images/<?=$post['image']; ?>\"alt=\"\" >\n+              <img src=\"images/\"alt=\"\" >\n           </div>\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $post['content']?>\n-            <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n+            <strong>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887482846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,10 @@\n           </div>\n         </br>\n        \n           <div class=\"post-content\">\n-            <?= $post['content']?>\n-            <strong>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n+           \n+            <strong>: publié le <?= $post['created_at']?> dans la catgeorie  ?> </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887524168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,15 +26,15 @@\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"></h1>\n           <div class=\"post-image\">\n-              <img src=\"images/\"alt=\"\" >\n+              <img src=\"images/<?=$post['image']; ?>\"alt=\"\" >\n           </div>\n         </br>\n        \n           <div class=\"post-content\">\n-           \n-            <strong>: publié le <?= $post['created_at']?> dans la catgeorie  ?> </strong>\n+            <?= $post['content']?>\n+            <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677887530925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+<\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n@@ -24,9 +25,9 @@\n \n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n-          <h1 class=\"post-title\"></h1>\n+          <h1 class=\"post-title\"><?= $post['title']?></h1>\n           <div class=\"post-image\">\n               <img src=\"images/<?=$post['image']; ?>\"alt=\"\" >\n           </div>\n         </br>\n"
+                },
+                {
+                    "date": 1677887536527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-<\n+<?php\n+$\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887541859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n-$\n+$post= get\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887554592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n-$post= get\n+$post= getPostById($id);\n+\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887560183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n $post= getPostById($id);\n-\n+$posts= \n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887582276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n $post= getPostById($id);\n-$posts= \n+$articles = getPosts(); \n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887588614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n $post= getPostById($id);\n $articles = getPosts(); \n+?>\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887612861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n <?php\n-$post= getPostById($id);\n-$articles = getPosts(); \n+; \n ?>\n <!DOCTYPE html>\n <html lang=\"en\">\n \n"
+                },
+                {
+                    "date": 1677887618319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n-<?php\n-; \n-?>\n+\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887631545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\n <!DOCTYPE html>\n <html lang=\"en\">\n \n <head>\n"
+                },
+                {
+                    "date": 1677887702230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   <div class=\"page-container\">\n \n     <!-- Content -->\n     <div class=\"container\">\n-\n+     \n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"><?= $post['title']?></h1>\n"
+                },
+                {
+                    "date": 1677887716689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   <div class=\"page-container\">\n \n     <!-- Content -->\n     <div class=\"container\">\n-     \n+       <!-- #region -->\n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"><?= $post['title']?></h1>\n"
+                },
+                {
+                    "date": 1677887726897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   <div class=\"page-container\">\n \n     <!-- Content -->\n     <div class=\"container\">\n-       <!-- #region -->\n+    <?php foreach($ as $post):?>\n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"><?= $post['title']?></h1>\n"
+                },
+                {
+                    "date": 1677887750291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   <div class=\"page-container\">\n \n     <!-- Content -->\n     <div class=\"container\">\n-    <?php foreach($ as $post):?>\n+    <?php foreach($posts as $post):?>\n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"><?= $post['title']?></h1>\n"
+                },
+                {
+                    "date": 1677887756811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n-            <?php foreach( $comments as $comment ):?>\n+            \n \n             <div class=\"comment\">\n               <h3 class=\"auteur\">Est ecrit par <?= $comment['auteur'];?></h3>\n               <p class=\"contenu\" ><?= $comment['comment'];?><br>\n"
+                },
+                {
+                    "date": 1677887778200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n             <?= $post['content']?>\n             <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n+        \n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n             \n \n"
+                },
+                {
+                    "date": 1677887784398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             <?= $post['content']?>\n             <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n-        \n+        <?\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n             \n \n"
+                },
+                {
+                    "date": 1677887789946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             <?= $post['content']?>\n             <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n-        <?\n+        <?php \n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n             \n \n"
+                },
+                {
+                    "date": 1677887796012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             <?= $post['content']?>\n             <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n-        <?php \n+        <?php endforeach;?>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n             \n \n"
+                },
+                {
+                    "date": 1677887823657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             <?= $post['content']?>\n             <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n-        <?php endforeach;?>\n+        <?php endforeach; ?>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n             \n \n"
+                },
+                {
+                    "date": 1677887838887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n               </p>\n               <br>\n             </div>\n \n-            <?php endforeach ; ?>\n+           \n         </div>\n         <br>\n         <form action=\"single.php?id=<?= $id?>\"  method=\"post\">\n           <input type=\"hidden\" name=\"id\" value=\"<?php echo $id ?>\">\n"
+                },
+                {
+                    "date": 1677887862596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   <div class=\"page-container\">\n \n     <!-- Content -->\n     <div class=\"container\">\n-    <?php foreach($posts as $post):?>\n+    \n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"><?= $post['title']?></h1>\n@@ -35,12 +35,11 @@\n             <?= $post['content']?>\n             <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n-        <?php endforeach; ?>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n-            \n+            <?php foreach( $comments as $comment ):?>\n \n             <div class=\"comment\">\n               <h3 class=\"auteur\">Est ecrit par <?= $comment['auteur'];?></h3>\n               <p class=\"contenu\" ><?= $comment['comment'];?><br>\n@@ -49,9 +48,9 @@\n               </p>\n               <br>\n             </div>\n \n-           \n+            <?php endforeach ; ?>\n         </div>\n         <br>\n         <form action=\"single.php?id=<?= $id?>\"  method=\"post\">\n           <input type=\"hidden\" name=\"id\" value=\"<?php echo $id ?>\">\n"
+                },
+                {
+                    "date": 1677936643617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     \n       <!-- Main Content Wrapper -->\n       <div class=\"\">\n         <div class=\"main-content single\">\n-          <h1 class=\"post-title\"><?= $post['title']?></h1>\n+          <h1 class=\"post-title\"><?= $posts['title']?></h1>\n           <div class=\"post-image\">\n               <img src=\"images/<?=$post['image']; ?>\"alt=\"\" >\n           </div>\n         </br>\n"
+                },
+                {
+                    "date": 1677936653867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"><?= $posts['title']?></h1>\n           <div class=\"post-image\">\n-              <img src=\"images/<?=$post['image']; ?>\"alt=\"\" >\n+              <img src=\"images/<?=$posts['image']; ?>\"alt=\"\" >\n           </div>\n         </br>\n        \n           <div class=\"post-content\">\n"
+                },
+                {
+                    "date": 1677936669412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n           </div>\n         </br>\n        \n           <div class=\"post-content\">\n-            <?= $post['content']?>\n+            <?= $posts['content']?>\n             <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n"
+                },
+                {
+                    "date": 1677936680118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         </br>\n        \n           <div class=\"post-content\">\n             <?= $posts['content']?>\n-            <strong><?= $post['prenom']; ?>: publié le <?= $post['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n+            <strong><?= $posts['prenom']; ?>: publié le <?= $posts['created_at']?> dans la catgeorie <?= $post['name']; ?> </strong>\n           </div>\n         </div>\n         <!-- <h1>Les commentaires</h1>\n         <div class=\"comments\">\n"
+                },
+                {
+                    "date": 1677936722127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       <div class=\"\">\n         <div class=\"main-content single\">\n           <h1 class=\"post-title\"><?= $posts['title']?></h1>\n           <div class=\"post-image\">\n-              <img src=\"pimages/<?=$posts['image']; ?>\"alt=\"\" >\n+              <img src=\"puimages/<?=$posts['image']; ?>\"alt=\"\" >\n           </div>\n         </br>\n        \n           <div class=\"post-content\">\n"
+                },
+                {
+                    "date": 1678366145106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n         </div>\n          <h1>Les commentaires</h1>\n         <div class=\"comments\">\n             <?php foreach($coms as $comment ):?>\n-              <div style=\"background:white; box-shadow: 0 5px 15px rgba(0,0,0.15); padding:5px 10px; border-radius:10px;margin-\n+              <div style=\"background:white; box-shadow: 0 5px 15px rgba(0,0,0.15); padding:5px 10px; border-radius:10px;margin-t\n             <div class=\"comment\">\n               <h3 class=\"auteur\">Est ecrit par <?= $comment['prenom'];?></h3>\n               <p class=\"contenu\" ><?= $comment['comment'];?><br>\n               <i class=\"far fa-calendar\"> <?= date('d F ,Y',strtotime($comment['created_at']));?></i>\n"
+                }
+            ],
+            "date": 1677879589408,
+            "name": "Commit-0",
+            "content": "<?php \nrequire_once 'refactoring.php';\ninclude('traitement.php');\n// Selection d'un article  grace à un id \n\n$post = selectOne($id);\n$comments= findAllComments($id);\n\n\n?>\n\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\n  <!-- Custom Styling -->\n  <link rel=\"stylesheet\" href=\"css/style.css\">\n\n  <title>Article </title>\n</head>\n\n<body>\n    <!-- Page header -->\n   <?php include('inc/header.php'); ?>\n\n  <!-- Page Wrapper -->\n  <div class=\"page-container\">\n\n    <!-- Content -->\n    <div class=\"container\">\n\n      <!-- Main Content Wrapper -->\n      <div class=\"\">\n        <div class=\"main-content single\">\n          <h1 class=\"post-title\"><?= $post['title']?></h1>\n          <div class=\"post-image\">\n              <img src=\"images/<?=$post['image']; ?>\"alt=\"\" >\n          </div>\n        </br>\n       \n          <div class=\"post-content\">\n            <?= $post['content']?>\n            <strong><?= $post['author']; ?>: publié le <?= $post['created_at']?></strong>\n          </div>\n        </div>\n        <h1>Les commentaires</h1>\n        <div class=\"comments\">\n            <?php foreach( $comments as $comment ):?>\n\n            <div class=\"comment\">\n              <h3 class=\"auteur\">Est ecrit par <?= $comment['auteur'];?></h3>\n              <p class=\"contenu\" ><?= $comment['comment'];?><br>\n              <i class=\"far fa-calendar\"> <?= date('d F ,Y',strtotime($comment['created_at']));?></i>\n              <a class=\"sup\" href=\"\">Supprimer</a>\n              </p>\n              <br>\n            </div>\n\n            <?php endforeach ; ?>\n        </div>\n        <br>\n        <form action=\"single.php?id=<?= $id?>\"  method=\"post\">\n          <input type=\"hidden\" name=\"id\" value=\"<?php echo $id ?>\">\n          <div>\n            <label>Votre Prenom:</label>\n            <input type=\"text\" name=\"auteur\"  class=\"text-input\">\n          </div>\n          <div>\n            <label>Body:</label>\n            <textarea name=\"comment\" id=\"body\" cols=\"130\" rows=\"15\"></textarea>\n          </div><br>\n          <div>\n              <button type=\"submit\" name=\"add-comment\" class=\"btn btn-big\">Commentez</button>\n          </div>\n        </form>\n        \n      </div>\n    </div>\n  </div> \n      <!-- // Main Content\n\n     \n\n\n</body>\n\n</html>"
+        }
+    ]
+}

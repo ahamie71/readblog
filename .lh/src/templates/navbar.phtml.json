@@ -1,0 +1,374 @@
+{
+    "sourceFile": "src/templates/navbar.phtml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 89,
+            "patches": [
+                {
+                    "date": 1677851598250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677851648761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,14 +17,16 @@\n         <h1 class=\"logo-text\"><span>READ</span>BLog</h1>\n \n     </div>\n     <ul class=\"nav\">\n+\n+    \n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n \n-            \n+        \n \n            \n        \n     </ul>  \n"
+                },
+                {
+                    "date": 1677851662290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,18 @@\n         <h1 class=\"logo-text\"><span>READ</span>BLog</h1>\n \n     </div>\n     <ul class=\"nav\">\n+    <?php\n+            if (!isset($_SESSION['user'])) {\n+              ?>\n \n-    \n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n \n+            else\n         \n \n            \n        \n"
+                },
+                {
+                    "date": 1677851667833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n-\n-            else\n+         \n+            else{}\n         \n \n            \n        \n"
+                },
+                {
+                    "date": 1677851676317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n-         \n+         <!-- #region -->\n             else{}\n         \n \n            \n"
+                },
+                {
+                    "date": 1677851691286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,17 +17,18 @@\n         <h1 class=\"logo-text\"><span>READ</span>BLog</h1>\n \n     </div>\n     <ul class=\"nav\">\n+        \n     <?php\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n-         <!-- #region -->\n+         \n             else{}\n         \n \n            \n"
+                },
+                {
+                    "date": 1677851703227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         <h1 class=\"logo-text\"><span>READ</span>BLog</h1>\n \n     </div>\n     <ul class=\"nav\">\n-        \n+    \n     <?php\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n"
+                },
+                {
+                    "date": 1677851712733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n-         \n+            <?php\n             else{}\n         \n \n            \n"
+                },
+                {
+                    "date": 1677851717821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,12 @@\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n             <?php\n-            else{}\n+           }\n+            else{\n+                \n+            }\n         \n \n            \n        \n"
+                },
+                {
+                    "date": 1677851723073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n             <?php\n            }\n             else{\n+\n                 \n             }\n         \n \n"
+                },
+                {
+                    "date": 1677851733755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <?php\n            }\n             else{\n \n-                \n+                <li><a href=\"index.php?action=display\">Articles</a></li>\n             }\n         \n \n            \n"
+                },
+                {
+                    "date": 1677851739324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,13 @@\n             <li><a href=\"index.php?action=display\">Articles</a></li>\n             <?php\n            }\n             else{\n+                ?>\n \n                 <li><a href=\"index.php?action=display\">Articles</a></li>\n             }\n+            \n         \n \n            \n        \n"
+                },
+                {
+                    "date": 1677851745974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=display\">Articles</a></li>\n+                \n             }\n             \n         \n \n"
+                },
+                {
+                    "date": 1677851753119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,11 +32,12 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=display\">Articles</a></li>\n-                \n+                <?php\n             }\n             \n+            ?>\n         \n \n            \n        \n"
+                },
+                {
+                    "date": 1677851759835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n            }\n             else{\n                 ?>\n \n-                <li><a href=\"index.php?action=display\">Articles</a></li>\n+                <li><a href=\"index.php?action=display\">Decon</a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677851795099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n            }\n             else{\n                 ?>\n \n-                <li><a href=\"index.php?action=display\">Decon</a></li>\n+                <li><a href=\"index.php?\">Deconnection </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677851800176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n            }\n             else{\n                 ?>\n \n-                <li><a href=\"index.php?\">Deconnection </a></li>\n+                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853126213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n+                \n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853132655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                \n+                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853288546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,11 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n+                <li class=\"nav-item\">\n+                                <a class=\"nav-link\" >{{ app.user.nom }}  {{  app.user.prenom }}</a>\n+                            </li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853294952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n-                                <a class=\"nav-link\" >{{ app.user.nom }}  {{  app.user.prenom }}</a>\n+                                <a class=\"nav-link\" ></a>\n                             </li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1677853303940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n-                                <a class=\"nav-link\" ></a>\n+                                <a class=\"nav-link\" ><?php echo $_SESSION</a>\n                             </li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1677853309490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n-                                <a class=\"nav-link\" ><?php echo $_SESSION</a>\n+                                <a class=\"nav-link\" ><?php echo $_SESSION['user']</a>\n                             </li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1677853314930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n-                                <a class=\"nav-link\" ><?php echo $_SESSION['user']</a>\n+                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['name']</a>\n                             </li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1677853335551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n-                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['name']</a>\n+                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                             </li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1677853349224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n                 <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                             </li>\n                 <?php\n+                \n             }\n             \n             ?>\n         \n"
+                },
+                {
+                    "date": 1677853358415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,11 +34,12 @@\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n+                     \n                             </li>\n                 <?php\n-                \n+\n             }\n             \n             ?>\n         \n"
+                },
+                {
+                    "date": 1677853363982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n                 <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n+    </ul>\n                 <?php\n \n             }\n             \n"
+                },
+                {
+                    "date": 1677853393648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <?php\n            }\n             else{\n                 ?>\n-\n+                  <ul class=\"navbar-nav mx-auto mb-2 mb-lg-0\">\n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n"
+                },
+                {
+                    "date": 1677853398838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n                 <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n-    </ul>\n+                 </ul>\n                 <?php\n \n             }\n             \n"
+                },
+                {
+                    "date": 1677853425053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,10 @@\n                 <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n+\n+                            \n                  </ul>\n                 <?php\n \n             }\n"
+                },
+                {
+                    "date": 1677853439638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,15 +31,21 @@\n            }\n             else{\n                 ?>\n                   <ul class=\"navbar-nav mx-auto mb-2 mb-lg-0\">\n+\n+                  <li class=\"nav-item\">\n+                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n+                     \n+                            </li>\n+\n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n \n-                            \n+\n                  </ul>\n                 <?php\n \n             }\n"
+                },
+                {
+                    "date": 1677853448443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,13 +37,10 @@\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n \n-                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li class=\"nav-item\">\n-                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n-                     \n-                            </li>\n+                <li class><a href=\"index.php?action=logout\">Deconnection </a></li>\n+               \n \n \n                  </ul>\n                 <?php\n"
+                },
+                {
+                    "date": 1677853453657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n \n-                <li class><a href=\"index.php?action=logout\">Deconnection </a></li>\n+                <li class =\"nav-item'><a href=\"index.php?action=logout\">Deconnection </a></li>\n                \n \n \n                  </ul>\n"
+                },
+                {
+                    "date": 1677853470176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n \n-                <li class =\"nav-item'><a href=\"index.php?action=logout\">Deconnection </a></li>\n+                <li class =\"nav-item\"><a  class navhref=\"index.php?action=logout\">Deconnection </a></li>\n                \n \n \n                  </ul>\n"
+                },
+                {
+                    "date": 1677853481072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n \n-                <li class =\"nav-item\"><a  class navhref=\"index.php?action=logout\">Deconnection </a></li>\n+                <li class =\"nav-item\"><a  class=\"nav-link\" navhref=\"index.php?action=logout\">Deconnection </a></li>\n                \n \n \n                  </ul>\n"
+                },
+                {
+                    "date": 1677853487559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n \n-                <li class =\"nav-item\"><a  class=\"nav-link\" navhref=\"index.php?action=logout\">Deconnection </a></li>\n+                <li class =\"nav-item\"><a  class=\"nav-link\" href=\"index.php?action=logout\">Deconnection </a></li>\n                \n \n \n                  </ul>\n"
+                },
+                {
+                    "date": 1677853515166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <?php\n            }\n             else{\n                 ?>\n-                  <ul class=\"navbar-nav mx-auto mb-2 mb-lg-0\">\n+                  <ul class=\"navbar-nav\"\">\n \n                   <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n"
+                },
+                {
+                    "date": 1677853536288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,17 +30,20 @@\n             <?php\n            }\n             else{\n                 ?>\n-                  <ul class=\"navbar-nav\"\">\n+                  <ul class=\"navbar-nav mx-auto mb-2 mb-lg-0\">\n \n                   <li class=\"nav-item\">\n                                 <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n                      \n                             </li>\n \n-                <li class =\"nav-item\"><a  class=\"nav-link\" href=\"index.php?action=logout\">Deconnection </a></li>\n-               \n+                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n+                <li class=\"nav-item\">\n+                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n+                     \n+                            </li>\n \n \n                  </ul>\n                 <?php\n"
+                },
+                {
+                    "date": 1677853549786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,25 +30,12 @@\n             <?php\n            }\n             else{\n                 ?>\n-                  <ul class=\"navbar-nav mx-auto mb-2 mb-lg-0\">\n \n-                  <li class=\"nav-item\">\n-                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n-                     \n-                            </li>\n-\n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li class=\"nav-item\">\n-                                <a class=\"nav-link\" ><?php echo $_SESSION['user']['prenom']?></a>\n-                     \n-                            </li>\n-\n-\n-                 </ul>\n+                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n-\n             }\n             \n             ?>\n         \n"
+                },
+                {
+                    "date": 1677853567296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n+                <li><a href=\"<?php echo \"\">Deconnection </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853574453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><a href=\"<?php echo \"\">Deconnection </a></li>\n+                <li><a href=\"<?php echo $_SESSION\">Deconnection </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853580962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><a href=\"<?php echo $_SESSION\">Deconnection </a></li>\n+                <li><a href=\"<?php echo $_SESSION['user']\">Deconnection </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853586068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><a href=\"<?php echo $_SESSION['user']\">Deconnection </a></li>\n+                <li><a href=\"<?php echo $_SESSION['user']['prenom']\">Deconnection </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853603770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><a href=\"<?php echo $_SESSION['user']['prenom']\">Deconnection </a></li>\n+                <li><a href=\"<?php echo $_SESSION['user']['prenom']?>\"> </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853611767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             else{\n                 ?>\n \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><a href=\"<?php echo $_SESSION['user']['prenom']?>\"> </a></li>\n+                <li><?php echo $_SESSION['user']['prenom']?>\"></a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853631407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,11 +30,11 @@\n             <?php\n            }\n             else{\n                 ?>\n-\n+               <li><?php echo $_SESSION['user']['prenom']?>\"></li>\n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><?php echo $_SESSION['user']['prenom']?>\"></a></li>\n+                <li><?php echo $_SESSION['user']['prenom']?>\"></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853643915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,11 +30,11 @@\n             <?php\n            }\n             else{\n                 ?>\n-               <li><?php echo $_SESSION['user']['prenom']?>\"></li>\n+               <li><?php echo $_SESSION['user']['prenom']?></li>\n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                <li><?php echo $_SESSION['user']['prenom']?>\"></li>\n+                \n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677853688251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,8 @@\n             else{\n                 ?>\n                <li><?php echo $_SESSION['user']['prenom']?></li>\n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n-                \n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1677855621596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <?php\n            }\n             else{\n                 ?>\n-               <li><?php echo $_SESSION['user']['prenom']?></li>\n+ \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1677855689476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n             <?php\n            }\n             else{\n                 ?>\n+                \n  \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n"
+                },
+                {
+                    "date": 1677960159939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n             <?php\n            }\n             else{\n                 ?>\n-                \n- \n+                 <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n+  \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1677960165801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n            }\n             else{\n                 ?>\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n+                 \n   \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n"
+                },
+                {
+                    "date": 1677960173442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,15 +25,15 @@\n \n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n-            <li><a href=\"index.php?action=display\">Articles</a></li>\n+  \n             <?php\n            }\n             else{\n                 ?>\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n-                 \n+                 <li><a href=\"index.php?action=display\">Articles</a></li>\n   \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n"
+                },
+                {
+                    "date": 1677960512691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,15 +25,15 @@\n \n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n-  \n+            <li><a href=\"index.php?action=display\">Articles</a></li>\n             <?php\n            }\n             else{\n                 ?>\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n-                 <li><a href=\"index.php?action=display\">Articles</a></li>\n+                 \n   \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n"
+                },
+                {
+                    "date": 1677971533111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n            }\n             else{\n                 ?>\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n-                 \n+                 <li><a href=\"index.php?action=display\">Articles</a></li>\n   \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n"
+                },
+                {
+                    "date": 1677971551399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \n             <li><a href=\"index.php?action=Home\">Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n-            <li><a href=\"index.php?action=display\">Articles</a></li>\n+            \n             <?php\n            }\n             else{\n                 ?>\n"
+                },
+                {
+                    "date": 1678111414393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <link rel=\"stylesheet\" href=\"public/css/style.css\">\n+    <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n </head>\n  \n  \n <header>\n"
+                },
+                {
+                    "date": 1678111595894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,9 @@\n     <meta charset=\"utf-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n-    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n-    <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n+   \n     <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n </head>\n  \n  \n"
+                },
+                {
+                    "date": 1678111604325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     <meta charset=\"utf-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n-   \n+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n+    <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n     <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n </head>\n  \n  \n"
+                },
+                {
+                    "date": 1678111732121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n+    <link rel=\"stylesheet\" href=\"public/css/style.css\">\n </head>\n  \n  \n <header>\n"
+                },
+                {
+                    "date": 1678111746374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <link rel=\"stylesheet\" href=\"public/css/style.css\">\n+    <link rel=\"stylesheet\" href=\"../public/css/style.css\">\n </head>\n  \n  \n <header>\n"
+                },
+                {
+                    "date": 1678111764203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <link rel=\"stylesheet\" href=\"../public/css/style.css\">\n+    <link rel=\"stylesheet\" href=\"/public/css/style.css\">\n </head>\n  \n  \n <header>\n"
+                },
+                {
+                    "date": 1678117367836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <link rel=\"stylesheet\" href=\"/public/css/style.css\">\n+\n </head>\n  \n  \n <header>\n"
+                },
+                {
+                    "date": 1678117385711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-\n+    <link rel=\"stylesheet\" href=\"public/css/style.css\">\n </head>\n  \n  \n <header>\n"
+                },
+                {
+                    "date": 1678125905162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     <?php\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n-            <li><a href=\"index.php?action=Home\">Home</a></li>\n+            <li><a href=\"index.php?action=Home\" >Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             \n             <?php\n"
+                },
+                {
+                    "date": 1678125910385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     <?php\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n-            <li><a href=\"index.php?action=Home\" >Home</a></li>\n+            <li><a href=\"index.php?action=Home\" style=\"color>Home</a></li>\n             <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             \n             <?php\n"
+                },
+                {
+                    "date": 1678125943477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n     <?php\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n-            <li><a href=\"index.php?action=Home\" style=\"color>Home</a></li>\n-            <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n+            <li><a href=\"index.php?action=Home\" style=\"color:white\">Home</a></li>\n+            <li><a href=\"index.php?action=Register style=\"color:white\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n             \n             <?php\n            }\n"
+                },
+                {
+                    "date": 1678125955906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n             <li><a href=\"index.php?action=Home\" style=\"color:white\">Home</a></li>\n-            <li><a href=\"index.php?action=Register style=\"color:white\">S'inscrire</a></li>\n-            <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n+            <li><a href=\"index.php?action=Register \"style=\"color:white\">S'inscrire</a></li>\n+            <li><a href=\"index.php?action=Connect\"style=\"color:white\"></a>Se connecter</a></li>\n             \n             <?php\n            }\n             else{\n"
+                },
+                {
+                    "date": 1678125966854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n             <li><a href=\"index.php?action=Home\" style=\"color:white\">Home</a></li>\n-            <li><a href=\"index.php?action=Register \"style=\"color:white\">S'inscrire</a></li>\n+            <li><a href=\"index.php?action=Register\"style=\"color:white\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\"style=\"color:white\"></a>Se connecter</a></li>\n             \n             <?php\n            }\n"
+                },
+                {
+                    "date": 1678126012829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n               ?>\n \n             <li><a href=\"index.php?action=Home\" style=\"color:white\">Home</a></li>\n             <li><a href=\"index.php?action=Register\"style=\"color:white\">S'inscrire</a></li>\n-            <li><a href=\"index.php?action=Connect\"style=\"color:white\"></a>Se connecter</a></li>\n+            <li><a href=\"index.php?action=Connect\" style=\"color:white\"></a>Se connecter</a></li>\n             \n             <?php\n            }\n             else{\n"
+                },
+                {
+                    "date": 1678126020881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     <?php\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n-            <li><a href=\"index.php?action=Home\" style=\"color:white\">Home</a></li>\n+            <li><a href=\"index.php?action=Home\" style=\"color:white;\">Home</a></li>\n             <li><a href=\"index.php?action=Register\"style=\"color:white\">S'inscrire</a></li>\n             <li><a href=\"index.php?action=Connect\" style=\"color:white\"></a>Se connecter</a></li>\n             \n             <?php\n"
+                },
+                {
+                    "date": 1678126036697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n             if (!isset($_SESSION['user'])) {\n               ?>\n \n             <li><a href=\"index.php?action=Home\" style=\"color:white;\">Home</a></li>\n-            <li><a href=\"index.php?action=Register\"style=\"color:white\">S'inscrire</a></li>\n-            <li><a href=\"index.php?action=Connect\" style=\"color:white\"></a>Se connecter</a></li>\n+            <li><a href=\"index.php?action=Register\"style=\"color:white;\">S'inscrire</a></li>\n+            <li><a href=\"index.php?action=Connect\" style=\"color:white;\">Se connecter</a></li>\n             \n             <?php\n            }\n             else{\n"
+                },
+                {
+                    "date": 1678126085020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n            }\n             else{\n                 ?>\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n-                 <li><a href=\"index.php?action=display\">Articles</a></li>\n+                 <li><a href=\"index.php?action=display\" style=\"color:white;\">Articles</a></li>\n   \n                 <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n                 <?php\n             }\n"
+                },
+                {
+                    "date": 1678269678013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,10 @@\n                 ?>\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n                  <li><a href=\"index.php?action=display\" style=\"color:white;\">Articles</a></li>\n   \n-                <li><a href=\"index.php?action=logout\">Deconnection </a></li>\n+                <li><a href=\"index.php?action=logout\"style=\"color:white;\">Deconnection </a></li>\n+                \n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1678269686232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n                  <li><a href=\"index.php?action=display\" style=\"color:white;\">Articles</a></li>\n   \n                 <li><a href=\"index.php?action=logout\"style=\"color:white;\">Deconnection </a></li>\n-                \n+                <li><a href=\"index.php?action=\"style=\"color:white;\">Admin </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1678438113346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,11 @@\n                  <h1>BIENVENUE <?php echo $_SESSION['user']['prenom']?></h1>\n                  <li><a href=\"index.php?action=display\" style=\"color:white;\">Articles</a></li>\n   \n                 <li><a href=\"index.php?action=logout\"style=\"color:white;\">Deconnection </a></li>\n-                <li><a href=\"index.php?action=\"style=\"color:white;\">Admin </a></li>\n+\n+                \n+                <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1678438198292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,14 @@\n                  <li><a href=\"index.php?action=display\" style=\"color:white;\">Articles</a></li>\n   \n                 <li><a href=\"index.php?action=logout\"style=\"color:white;\">Deconnection </a></li>\n \n-                \n+                if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n+\n+echo '<a class=\"nav-link\" href=\"./view/admin.phtml\">Admin</a>';\n+}\n+?>\n+\n                 <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n                 <?php\n             }\n             \n"
+                },
+                {
+                    "date": 1678438205493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,11 +35,13 @@\n                  <li><a href=\"index.php?action=display\" style=\"color:white;\">Articles</a></li>\n   \n                 <li><a href=\"index.php?action=logout\"style=\"color:white;\">Deconnection </a></li>\n \n+\n+                \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-echo '<a class=\"nav-link\" href=\"./view/admin.phtml\">Admin</a>';\n+\n }\n ?>\n \n                 <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n"
+                },
+                {
+                    "date": 1678438210986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   \n                 <li><a href=\"index.php?action=logout\"style=\"color:white;\">Deconnection </a></li>\n \n \n-                \n+                <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n \n }\n"
+                },
+                {
+                    "date": 1678438218061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \n                 <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-\n+                    <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n }\n ?>\n \n                 <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n"
+                },
+                {
+                    "date": 1678438224288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \n                 <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-                    <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n+               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n }\n ?>\n \n                 <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n"
+                },
+                {
+                    "date": 1678438230972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \n                 <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n+               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n }\n ?>\n \n                 <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n"
+                },
+                {
+                    "date": 1678438237237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,10 +39,10 @@\n \n                 <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n-}\n+               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n+\n ?>\n \n                 <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n                 <?php\n"
+                },
+                {
+                    "date": 1678438248478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,8 @@\n                echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n \n ?>\n \n-                <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n                 <?php\n             }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1678438260465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,10 +43,9 @@\n                echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n \n ?>\n \n-                <?php\n-            }\n+            <?php\n             \n             ?>\n         \n \n"
+                },
+                {
+                    "date": 1678438267364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,13 +39,13 @@\n \n                 <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n-\n+               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n ?>\n \n             <?php\n+                }\n             \n             ?>\n         \n \n"
+                },
+                {
+                    "date": 1678438308655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \n                 <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-               echo'     <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>\n+               echo'  <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n ?>\n \n             <?php\n                 }\n"
+                },
+                {
+                    "date": 1678438315235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,11 +39,12 @@\n \n                 <?php \n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n-               echo'  <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n+               echo' <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n ?>\n \n+\n             <?php\n                 }\n             \n             ?>\n"
+                },
+                {
+                    "date": 1678438321249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n                 if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n \n                echo' <li><a href=\"index.php?action=Admin\"style=\"color:white;\">Admin </a></li>'\n ?>\n+<?php }\n \n \n             <?php\n                 }\n"
+                }
+            ],
+            "date": 1677851598250,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html>\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Untitled</title>\n    <script type=\"text/javascript\" src=\"script.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n    <link rel=\"stylesheet\" href=\"public/css/style.css\">\n</head>\n \n \n<header>\n    <div class=\"logo\">\n        <h1 class=\"logo-text\"><span>READ</span>BLog</h1>\n\n    </div>\n    <ul class=\"nav\">\n            <li><a href=\"index.php?action=Home\">Home</a></li>\n            <li><a href=\"index.php?action=Register\">S'inscrire</a></li>\n            <li><a href=\"index.php?action=Connect\">Se connecter</a></li>\n            <li><a href=\"index.php?action=display\">Articles</a></li>\n\n            \n\n           \n       \n    </ul>  \n</header>"
+        }
+    ]
+}

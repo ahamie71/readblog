@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/controllers/admin/admincontroller.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1678270749218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678270807331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n \n function AdminPage(){\n     \n-    require_once(dirname(__FILE__, 2) . '/templates/Adminadmin.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/admin/admin.phtml');\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678271006909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n \n function AdminPage(){\n     \n-    require_once(dirname(__FILE__, 2) . '/templates/admin/admin.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n \n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1678270749218,
+            "name": "Commit-0",
+            "content": "<?php \n\nfunction AdminPage(){\n    \n    require_once(dirname(__FILE__, 2) . '/templates/Adminadmin.phtml');\n\n}"
+        }
+    ]
+}

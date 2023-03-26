@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/controllers/logincontroller.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1677851488948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677851496990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $user = getUserByName($prenom);\n \n         if (password_verify($password, $user['password'])) {\n             $_SESSION['user'] = $user;\n-            \n+            header\n \n         } else {\n             echo \" password incorrecte\";\n         }\n"
+                },
+                {
+                    "date": 1677851512024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $user = getUserByName($prenom);\n \n         if (password_verify($password, $user['password'])) {\n             $_SESSION['user'] = $user;\n-            header\n+            header('Location:index)\n \n         } else {\n             echo \" password incorrecte\";\n         }\n"
+                },
+                {
+                    "date": 1677851520175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $user = getUserByName($prenom);\n \n         if (password_verify($password, $user['password'])) {\n             $_SESSION['user'] = $user;\n-            header('Location:index)\n+            header('Location:index.php?)\n \n         } else {\n             echo \" password incorrecte\";\n         }\n"
+                },
+                {
+                    "date": 1677851530918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $user = getUserByName($prenom);\n \n         if (password_verify($password, $user['password'])) {\n             $_SESSION['user'] = $user;\n-            header('Location:index.php?)\n+            header('Location:index.php?action=)\n \n         } else {\n             echo \" password incorrecte\";\n         }\n"
+                },
+                {
+                    "date": 1677851538689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $user = getUserByName($prenom);\n \n         if (password_verify($password, $user['password'])) {\n             $_SESSION['user'] = $user;\n-            header('Location:index.php?action=)\n+            header('Location:index.php?action= dislay)\n \n         } else {\n             echo \" password incorrecte\";\n         }\n"
+                },
+                {
+                    "date": 1677851554479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $user = getUserByName($prenom);\n \n         if (password_verify($password, $user['password'])) {\n             $_SESSION['user'] = $user;\n-            header('Location:index.php?action= dislay)\n+            header('Location:index.php?action=dislay');\n \n         } else {\n             echo \" password incorrecte\";\n         }\n"
+                },
+                {
+                    "date": 1677851811686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $user = getUserByName($prenom);\n \n         if (password_verify($password, $user['password'])) {\n             $_SESSION['user'] = $user;\n-            header('Location:index.php?action=dislay');\n+            header('Location:index.php?action=display');\n \n         } else {\n             echo \" password incorrecte\";\n         }\n@@ -20,4 +20,5 @@\n         require_once(dirname(__FILE__, 2) . '/templates/login.phtml');\n \n     }\n }\n+function logout{}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677851819534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,9 @@\n         require_once(dirname(__FILE__, 2) . '/templates/login.phtml');\n \n     }\n }\n-function logout{}\n\\ No newline at end of file\n+\n+function logout{\n+\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677851826457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,8 @@\n \n     }\n }\n \n-function logout{\n+function logout(){\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677851857492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,10 @@\n \n     }\n }\n \n-function logout(){\n-\n-\n+nction logout()\n+{\n+    session_destroy();\n+    header('location:index.php?action=Home');\n+    exit();\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679413269977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n-session_start();\n+\n function connection()\n {\n \n     if (isset($_POST['prenom']) && isset($_POST['password'])) {\n@@ -21,9 +21,9 @@\n \n     }\n }\n \n-nction logout()\n+function logout()\n {\n     session_destroy();\n     header('location:index.php?action=Home');\n     exit();\n"
+                }
+            ],
+            "date": 1677851488948,
+            "name": "Commit-0",
+            "content": "<?php\nsession_start();\nfunction connection()\n{\n\n    if (isset($_POST['prenom']) && isset($_POST['password'])) {\n        $prenom = $_POST['prenom'];\n        $password = $_POST['password'];\n        require_once(dirname(__FILE__, 2) . '/Model/users.php');\n        $user = getUserByName($prenom);\n\n        if (password_verify($password, $user['password'])) {\n            $_SESSION['user'] = $user;\n            \n\n        } else {\n            echo \" password incorrecte\";\n        }\n    } else {\n        require_once(dirname(__FILE__, 2) . '/templates/login.phtml');\n\n    }\n}\n"
+        }
+    ]
+}

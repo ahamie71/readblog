@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/templates/addcategorie.phtml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1678453868710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678453875034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,8 @@\n         <label for=\"name\">Email</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n           placeholder=\"Enter a email\" name=\"email\">\n \n-      </div>\n\\ No newline at end of file\n+      </div>\n+\n+  </form>\n+  <\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678453898683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,5 @@\n \n       </div>\n \n   </form>\n-  <\n\\ No newline at end of file\n+  </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678453904987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,5 @@\n \n       </div>\n \n   </form>\n-  </div>\n\\ No newline at end of file\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678453911690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,7 @@\n \n       </div>\n \n   </form>\n+  </div>\n+  </div>\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678453918087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,6 @@\n \n   </form>\n   </div>\n   </div>\n-  \n\\ No newline at end of file\n+</body>\n+<\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678453923215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,5 @@\n   </form>\n   </div>\n   </div>\n </body>\n-<\n\\ No newline at end of file\n+<html></html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678453931396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   <div id=\"form\">\n   <div class=\"container mt-1\">\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n-        <label for=\"name\">Prenom</label>\n+        <label for=\"name\">Name</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n           placeholder=\"Enter a name\" name=\"prenom\">\n       </div>\n       <div class=\"form-group\">\n@@ -29,5 +29,5 @@\n   </form>\n   </div>\n   </div>\n </body>\n-<html></html>\n\\ No newline at end of file\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678453937366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n           placeholder=\"Enter a name\" name=\"prenom\">\n       </div>\n       <div class=\"form-group\">\n-        <label for=\"name\">Email</label>\n+        <label for=\"name\">Description</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n           placeholder=\"Enter a email\" name=\"email\">\n \n       </div>\n"
+                },
+                {
+                    "date": 1678453951985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n-          placeholder=\"Enter a name\" name=\"prenom\">\n+          placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n"
+                },
+                {
+                    "date": 1678453957908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   <div class=\"container mt-1\">\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n-        <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n+        <input type=\"text\" class=\"form-control\" \" aria-describedby=\"emailHelp\"\n           placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n"
+                },
+                {
+                    "date": 1678453964553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   <div class=\"container mt-1\">\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n-        <input type=\"text\" class=\"form-control\" \" aria-describedby=\"emailHelp\"\n+        <input type=\"text\" class=\"form-control\"\n           placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n"
+                },
+                {
+                    "date": 1678453970110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   <div class=\"container mt-1\">\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n-        <input type=\"text\" class=\"form-control\"\n+        <input type=\"text\" class=\"form-control\" required=\n           placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n"
+                },
+                {
+                    "date": 1678453976502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   <div class=\"container mt-1\">\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n-        <input type=\"text\" class=\"form-control\" required=\n+        <input type=\"text\" class=\"form-control\" required=\"re\n           placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n"
+                },
+                {
+                    "date": 1678453984259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   <div class=\"container mt-1\">\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n-        <input type=\"text\" class=\"form-control\" required=\"re\n+        <input type=\"text\" class=\"form-control\" required=\"required\"\n           placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n"
+                },
+                {
+                    "date": 1678453998299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   <div class=\"container mt-1\">\n   <form action=\"index.php?action=adduser\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n-        <input type=\"text\" class=\"form-control\" required=\"required\"\n+        <input type=\"text\" class=\"form-control\" required=\"required\" \n           placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n"
+                },
+                {
+                    "date": 1678454007220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n-          placeholder=\"Enter a email\" name=\"email\">\n+          placeholder=\"Enter a email\" name=\"descr\">\n \n       </div>\n \n   </form>\n"
+                },
+                {
+                    "date": 1678454012369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n-          placeholder=\"Enter a email\" name=\"descr\">\n+          placeholder=\"Enter a email\" name=\"description\">\n \n       </div>\n \n   </form>\n"
+                },
+                {
+                    "date": 1678454022122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n-          placeholder=\"Enter a email\" name=\"description\">\n+          placeholder=\"enter a desc name=\"description\">\n \n       </div>\n \n   </form>\n"
+                },
+                {
+                    "date": 1678454029507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,18 +12,18 @@\n \n <body>\n   <div id=\"form\">\n   <div class=\"container mt-1\">\n-  <form action=\"index.php?action=adduser\"method=\"POST\">\n+  <form action=\"index.php?action=\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n         <input type=\"text\" class=\"form-control\" required=\"required\" \n           placeholder=\"Enter a name\" name=\"name\">\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n-          placeholder=\"enter a desc name=\"description\">\n+          placeholder=\"enter a description name=\"description\">\n \n       </div>\n \n   </form>\n"
+                },
+                {
+                    "date": 1678454302837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n <body>\n   <div id=\"form\">\n   <div class=\"container mt-1\">\n-  <form action=\"index.php?action=\"method=\"POST\">\n+  <form action=\"index.php?actioncat=\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n         <input type=\"text\" class=\"form-control\" required=\"required\" \n           placeholder=\"Enter a name\" name=\"name\">\n"
+                },
+                {
+                    "date": 1678454309953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n <body>\n   <div id=\"form\">\n   <div class=\"container mt-1\">\n-  <form action=\"index.php?actioncat=\"method=\"POST\">\n+  <form action=\"index.php?action=cat\"method=\"POST\">\n       <div class=\"form-group\">\n         <label for=\"name\">Name</label>\n         <input type=\"text\" class=\"form-control\" required=\"required\" \n           placeholder=\"Enter a name\" name=\"name\">\n"
+                },
+                {
+                    "date": 1678454325981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       </div>\n       <div class=\"form-group\">\n         <label for=\"name\">Description</label>\n         <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n-          placeholder=\"enter a description name=\"description\">\n+          placeholder=\"enter a description\" name=\"description\">\n \n       </div>\n \n   </form>\n"
+                },
+                {
+                    "date": 1678454482731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n           placeholder=\"enter a description\" name=\"description\">\n \n       </div>\n \n+      <button type=\"submit\" class=\"btn btn-primary\" name=\"submit\">Submit</button>\n   </form>\n   </div>\n   </div>\n </body>\n"
+                }
+            ],
+            "date": 1678453868710,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n    integrity=\"sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65\" crossorigin=\"anonymous\">\n  <title>Document</title>\n</head>\n\n<body>\n  <div id=\"form\">\n  <div class=\"container mt-1\">\n  <form action=\"index.php?action=adduser\"method=\"POST\">\n      <div class=\"form-group\">\n        <label for=\"name\">Prenom</label>\n        <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n          placeholder=\"Enter a name\" name=\"prenom\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"name\">Email</label>\n        <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\n          placeholder=\"Enter a email\" name=\"email\">\n\n      </div>"
+        }
+    ]
+}

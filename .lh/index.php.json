@@ -1,0 +1,590 @@
+{
+    "sourceFile": "index.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 143,
+            "patches": [
+                {
+                    "date": 1677851887825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677851897443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n \n-if ($_GET['action'] == 'Connect') {\n+if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n-    connection();\n+    logout();\n }\n }\n  else {\n require_once(dirname(__FILE__) . '/src/controllers/homecontrollers.php');\n"
+                },
+                {
+                    "date": 1677851903051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     connection();\n }\n \n if ($_GET['action'] == 'logout') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n }\n  else {\n"
+                },
+                {
+                    "date": 1677862159325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n if ($_GET['action'] == 'Register') {\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n-if ($_GET['action'] == 'AddPost') {\n+if ($_GET['action'] == 'A') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     \n }\n \n"
+                },
+                {
+                    "date": 1677862169983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,11 @@\n if ($_GET['action'] == 'Register') {\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n-if ($_GET['action'] == 'A') {\n+if ($_GET['action'] == 'AddArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n+    cr\n     \n }\n \n if ($_GET['action'] == 'Connect') {\n"
+                },
+                {
+                    "date": 1677862189705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     registration();\n }\n if ($_GET['action'] == 'AddArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    cr\n+    addArticle\n     \n }\n \n if ($_GET['action'] == 'Connect') {\n"
+                },
+                {
+                    "date": 1677862204304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     registration();\n }\n if ($_GET['action'] == 'AddArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    addArticle\n+    ()\n     \n }\n \n if ($_GET['action'] == 'Connect') {\n"
+                },
+                {
+                    "date": 1677862210636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n if ($_GET['action'] == 'Register') {\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n-if ($_GET['action'] == 'AddArticle') {\n+if ($_GET['action'] == '    addArticle()\n+') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     ()\n     \n }\n"
+                },
+                {
+                    "date": 1677862215751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,9 @@\n if ($_GET['action'] == 'Register') {\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n-if ($_GET['action'] == '    addArticle()\n-') {\n+if ($_GET['action'] == 'addArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     ()\n     \n }\n"
+                },
+                {
+                    "date": 1677862249871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     registration();\n }\n if ($_GET['action'] == 'addArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    ()\n+    addArticle(()\n     \n }\n \n if ($_GET['action'] == 'Connect') {\n"
+                },
+                {
+                    "date": 1677862256513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     registration();\n }\n if ($_GET['action'] == 'addArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    addArticle(()\n+    addArticle()\n     \n }\n \n if ($_GET['action'] == 'Connect') {\n"
+                },
+                {
+                    "date": 1677885030697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,13 @@\n     registration();\n }\n if ($_GET['action'] == 'addArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    addArticle()\n+    addArticle();\n     \n }\n \n+\n if ($_GET['action'] == 'Connect') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n"
+                },
+                {
+                    "date": 1677885040948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,14 @@\n     \n }\n \n \n+if ($_GET['action'] == 'dip') {\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n+    addArticle();\n+    \n+}\n+\n if ($_GET['action'] == 'Connect') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n"
+                },
+                {
+                    "date": 1677885049783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     \n }\n \n \n-if ($_GET['action'] == 'dip') {\n+if ($_GET['action'] == 'displa') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n     \n }\n"
+                },
+                {
+                    "date": 1677885055558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     \n }\n \n \n-if ($_GET['action'] == 'displa') {\n+if ($_GET['action'] == 'displaonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n     \n }\n"
+                },
+                {
+                    "date": 1677885062551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,15 @@\n \n \n if ($_GET['action'] == 'displaonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    addArticle();\n+    if ($_GET['action'] == 'addArticle') {\n+        require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n+        addArticle();\n+        \n+    }\n     \n+    \n }\n \n if ($_GET['action'] == 'Connect') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1677885097553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,15 +22,10 @@\n \n \n if ($_GET['action'] == 'displaonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    if ($_GET['action'] == 'addArticle') {\n-        require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-        addArticle();\n-        \n-    }\n+    DisplayOnePost()\n     \n-    \n }\n \n if ($_GET['action'] == 'Connect') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1677886772354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,11 @@\n     \n }\n \n \n-if ($_GET['action'] == 'displaonepost') {\n+if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    DisplayOnePost()\n+    DisplayOnePost();\n     \n }\n \n if ($_GET['action'] == 'Connect') {\n"
+                },
+                {
+                    "date": 1678187499320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n if ($_GET['action'] == 'addArticle') {\n+    if\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n     \n }\n"
+                },
+                {
+                    "date": 1678187504482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,11 @@\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n if ($_GET['action'] == 'addArticle') {\n+    \n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     if\n-    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n     \n }\n \n"
+                },
+                {
+                    "date": 1678187512633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    if\n+    if($_POST[])\n     addArticle();\n     \n }\n \n"
+                },
+                {
+                    "date": 1678187518098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    if($_POST[])\n+    if($_POST['registrer'] == ')\n     addArticle();\n     \n }\n \n"
+                },
+                {
+                    "date": 1678187526382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    if($_POST['registrer'] == ')\n+    ifisset($_POST['registrer'] == ')\n     addArticle();\n     \n }\n \n"
+                },
+                {
+                    "date": 1678187532450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    ifisset($_POST['registrer'] == ')\n+    if(isset($_POST['registrer'])\n     addArticle();\n     \n }\n \n"
+                },
+                {
+                    "date": 1678187538057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    if(isset($_POST['registrer'])\n+    if(isset($_POST['registrer']){\n     addArticle();\n     \n }\n \n"
+                },
+                {
+                    "date": 1678187545687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    if(isset($_POST['registrer']){\n+    if(isset($_POST['registrer'])){\n     addArticle();\n     \n }\n \n"
+                },
+                {
+                    "date": 1678187551703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     if(isset($_POST['registrer'])){\n     addArticle();\n-    \n+    }\n }\n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678187597025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    if(isset($_POST['registrer'])){\n-    addArticle();\n-    }\n+  \n }\n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678188255310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-  \n+    get\n }\n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678188262262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    get\n+    addArticle()\n }\n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678188277995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,12 +16,14 @@\n }\n if ($_GET['action'] == 'addArticle') {\n     \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    addArticle()\n+    addArticle();\n }\n \n \n+\n+\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n"
+                },
+                {
+                    "date": 1678188284882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n+if ($_GET['action'] == '\n \n \n-\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n"
+                },
+                {
+                    "date": 1678188295358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n-if ($_GET['action'] == '\n+if ($_GET['action'] == 'affiche\n \n \n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1678188304132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,13 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n-if ($_GET['action'] == 'affiche\n+if ($_GET['action'] == 'affiche') {\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n \n \n+\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n"
+                },
+                {
+                    "date": 1678188310482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     addArticle();\n }\n \n if ($_GET['action'] == 'affiche') {\n-    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/controller.php');\n \n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678188324116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     addArticle();\n }\n \n if ($_GET['action'] == 'affiche') {\n-    require_once(dirname(__FILE__) . '/src/controllers/controller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/afficheformcontroller.php');\n \n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678188343369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,11 +21,11 @@\n }\n \n if ($_GET['action'] == 'affiche') {\n     require_once(dirname(__FILE__) . '/src/controllers/afficheformcontroller.php');\n+    afficheForm()\n \n \n-\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n"
+                },
+                {
+                    "date": 1678188494170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,11 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n-if ($_GET['action'] == 'affiche') {\n-    require_once(dirname(__FILE__) . '/src/controllers/afficheformcontroller.php');\n-    afficheForm()\n \n \n+\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n"
+                },
+                {
+                    "date": 1678189123921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n if ($_GET['action'] == 'addArticle') {\n-    \n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n"
+                },
+                {
+                    "date": 1678193007817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n if ($_GET['action'] == 'Register') {\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n-if ($_GET['action'] == 'addArticle') {\n+if ($_GET['action'] == 'crete') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n"
+                },
+                {
+                    "date": 1678193026047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n if ($_GET['action'] == 'Register') {\n     require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n     registration();\n }\n-if ($_GET['action'] == 'crete') {\n+if ($_GET['action'] == 'addArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n"
+                },
+                {
+                    "date": 1678193036115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,14 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n+if ($_GET['action'] == 'createArticle') {\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n+    addArticle();\n+}\n \n \n-\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n"
+                },
+                {
+                    "date": 1678193042390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n }\n \n if ($_GET['action'] == 'createArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    addArticle();\n+    create();\n }\n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678194387994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n }\n \n if ($_GET['action'] == 'createArticle') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    create();\n+    createArticle();\n }\n \n \n if ($_GET['action'] == 'displayonepost') {\n"
+                },
+                {
+                    "date": 1678203858040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,12 @@\n     createArticle();\n }\n \n \n+if ($_GET['action'] == 'Delete') {\n+    require_once(dirname(__FILE__) . '/src/Controllers/messagecontroller.php');\n+    deleteMessage();\n+}\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n"
+                },
+                {
+                    "date": 1678203864467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n }\n \n \n if ($_GET['action'] == 'Delete') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/messagecontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/messagecontroller.php');\n     deleteMessage();\n }\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1678203871115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n }\n \n \n if ($_GET['action'] == 'Delete') {\n-    require_once(dirname(__FILE__) . '/src/controllers/messagecontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     deleteMessage();\n }\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1678204475890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n \n if ($_GET['action'] == 'Delete') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    deleteMessage();\n+    deleteArticle();\n }\n if ($_GET['action'] == 'displayonepost') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n"
+                },
+                {
+                    "date": 1678233628915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,12 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n+if ($_GET['action'] == 'Edit') {\n+    require_once(dirname(__FILE__) . '/src/Controllers/messagecontroller.php');\n+    updateMessage();\n+}\n \n if ($_GET['action'] == 'Delete') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     deleteArticle();\n"
+                },
+                {
+                    "date": 1678233634915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     createArticle();\n }\n \n if ($_GET['action'] == 'Edit') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/messagecontroller.php');\n+    require_once(dirname(__FILE__) . '/src/Controllers/.php');\n     updateMessage();\n }\n \n if ($_GET['action'] == 'Delete') {\n"
+                },
+                {
+                    "date": 1678233642456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     createArticle();\n }\n \n if ($_GET['action'] == 'Edit') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/.php');\n+    require_once(dirname(__FILE__) . '/src/Controllers/postscontroller.php');\n     updateMessage();\n }\n \n if ($_GET['action'] == 'Delete') {\n"
+                },
+                {
+                    "date": 1678233652227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     createArticle();\n }\n \n if ($_GET['action'] == 'Edit') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/postscontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     updateMessage();\n }\n \n if ($_GET['action'] == 'Delete') {\n"
+                },
+                {
+                    "date": 1678269640946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,12 @@\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n \n+if ($_GET['action'] == 'Connect') {\n+    require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n+    connection();\n+}\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n"
+                },
+                {
+                    "date": 1678269646483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     connection();\n }\n \n if ($_GET['action'] == 'Connect') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n+    require_once(dirname(__FILE__) . '/src/Controllers/controller.php');\n     connection();\n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678269656974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     connection();\n }\n \n if ($_GET['action'] == 'Connect') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/controller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     connection();\n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678269663595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,11 +43,11 @@\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n \n-if ($_GET['action'] == 'Connect') {\n+if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    connection();\n+    ();\n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n"
+                },
+                {
+                    "date": 1678270767634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,10 +44,10 @@\n     connection();\n }\n \n if ($_GET['action'] == 'Admin') {\n-    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    ();\n+    require_once(dirname(__FILE__) . '/src/controllers/adminadmincontroller.php');\n+    AdminPage();\n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n"
+                },
+                {
+                    "date": 1678270780651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     connection();\n }\n \n if ($_GET['action'] == 'Admin') {\n-    require_once(dirname(__FILE__) . '/src/controllers/adminadmincontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/admin/admincontroller.php');\n     AdminPage();\n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678270985153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     connection();\n }\n \n if ($_GET['action'] == 'Admin') {\n-    require_once(dirname(__FILE__) . '/src/controllers/admin/admincontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678272680426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n+    \n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n"
+                },
+                {
+                    "date": 1678272685582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n-    \n+    afficheuser()\n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n"
+                },
+                {
+                    "date": 1678272708350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n-    afficheuser()\n+   \n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n"
+                },
+                {
+                    "date": 1678272719691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n }\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    AdminPage();\n+    aff\n    \n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678272736660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n }\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    aff\n+    afficheuser();\n    \n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678272755527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n }\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    afficheuser();\n+    AdminPage();\n    \n }\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678272973849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n    \n }\n+\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n"
+                },
+                {
+                    "date": 1678272985680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n+    \n    \n }\n \n if ($_GET['action'] == 'logout') {\n"
+                },
+                {
+                    "date": 1678272990988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n-    \n+    affiche\n    \n }\n \n if ($_GET['action'] == 'logout') {\n"
+                },
+                {
+                    "date": 1678273154534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n-    affiche\n    \n+   \n }\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678279687571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n+    \n    \n    \n }\n \n"
+                },
+                {
+                    "date": 1678279756462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,16 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n+\n+   \n+   \n+}\n+\n+if ($_GET['action'] == 'Admin') {\n+    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n+    AdminPage();\n     \n    \n    \n }\n"
+                },
+                {
+                    "date": 1678279774512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,21 +46,12 @@\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n-\n    \n    \n }\n \n-if ($_GET['action'] == 'Admin') {\n-    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    AdminPage();\n-    \n-   \n-   \n-}\n-\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n"
+                },
+                {
+                    "date": 1678280168592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n    \n    \n }\n \n+\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n"
+                },
+                {
+                    "date": 1678280410908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,16 @@\n    \n    \n }\n \n+if ($_GET['action'] == 'Admin') {\n+    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n+    AdminPage();\n+   \n+   \n+}\n \n+\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n"
+                },
+                {
+                    "date": 1678280421247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n    \n    \n }\n \n-if ($_GET['action'] == 'Admin') {\n+if ($_GET['action'] == 'Admincat') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n    \n    \n"
+                },
+                {
+                    "date": 1678280427134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,11 +50,11 @@\n    \n    \n }\n \n-if ($_GET['action'] == 'Admincat') {\n+if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    AdminPage();\n+    \n    \n    \n }\n \n"
+                },
+                {
+                    "date": 1678280450723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n }\n \n if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    \n+    categorie()\n    \n    \n }\n \n"
+                },
+                {
+                    "date": 1678280456155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n }\n \n if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    categorie()\n+    categorie();\n    \n    \n }\n \n"
+                },
+                {
+                    "date": 1678280462395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n    \n }\n \n if ($_GET['action'] == 'Admincategorie') {\n-    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n     categorie();\n    \n    \n }\n"
+                },
+                {
+                    "date": 1678281496613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,8 +58,10 @@\n    \n }\n \n \n+\n+\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n"
+                },
+                {
+                    "date": 1678281505578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,11 +57,16 @@\n    \n    \n }\n \n+if ($_GET['action'] == 'Admincategorie') {\n+    require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n+    categorie();\n+   \n+   \n+}\n \n \n-\n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n }\n"
+                },
+                {
+                    "date": 1678281511912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,13 +57,13 @@\n    \n    \n }\n \n-if ($_GET['action'] == 'Admincategorie') {\n+if ($_GET['action'] == 'adduser') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n-    categorie();\n    \n    \n+   \n }\n \n \n if ($_GET['action'] == 'logout') {\n"
+                },
+                {
+                    "date": 1678282502495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n    \n }\n \n if ($_GET['action'] == 'adduser') {\n-    require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/admncontroller.php');\n    \n    \n    \n }\n"
+                },
+                {
+                    "date": 1678282508027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,10 @@\n    \n }\n \n if ($_GET['action'] == 'adduser') {\n-    require_once(dirname(__FILE__) . '/src/controllers/admncontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n+    add\n    \n    \n    \n }\n"
+                },
+                {
+                    "date": 1678284318395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,12 +59,9 @@\n }\n \n if ($_GET['action'] == 'adduser') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    add\n-   \n-   \n-   \n+    add_user(); \n }\n \n \n if ($_GET['action'] == 'logout') {\n"
+                },
+                {
+                    "date": 1678284329419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,8 +62,12 @@\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     add_user(); \n }\n \n+if ($_GET['action'] == 'move') {\n+    require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n+    add_user(); \n+}\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n     logout();\n"
+                },
+                {
+                    "date": 1678284335474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n }\n \n if ($_GET['action'] == 'move') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    add_user(); \n+    dele(); \n }\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678290392198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n }\n \n if ($_GET['action'] == 'move') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    dele(); \n+    deleteUser($id); \n }\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678290453062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n }\n \n if ($_GET['action'] == 'move') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    deleteUser($id); \n+    deleteUser(); \n }\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678290626339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n }\n \n if ($_GET['action'] == 'move') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    deleteUser(); \n+    moveuser()\n }\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678290795617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n }\n \n if ($_GET['action'] == 'move') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    moveuser()\n+    moveser();\n }\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678303970385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,10 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n+\n+\n if ($_GET['action'] == 'Edit') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     updateMessage();\n }\n@@ -64,9 +66,9 @@\n }\n \n if ($_GET['action'] == 'move') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    moveser();\n+    moveUser();\n }\n \n if ($_GET['action'] == 'logout') {\n     require_once(dirname(__FILE__) . '/src/controllers/logincontroller.php');\n"
+                },
+                {
+                    "date": 1678303987410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,12 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n+if ($_GET['action'] == 'affichecom') {\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n+    createArticle();\n+}\n \n \n if ($_GET['action'] == 'Edit') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1678303993812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n }\n \n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    createArticle();\n+    affiche\n }\n \n \n if ($_GET['action'] == 'Edit') {\n"
+                },
+                {
+                    "date": 1678304150748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n }\n \n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    affiche\n+    getcomment()\n }\n \n \n if ($_GET['action'] == 'Edit') {\n"
+                },
+                {
+                    "date": 1678355389438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,16 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n+if ($_GET['action'] == 'createArticle') {\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n+    createArticle();\n+}\n+\n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    getcomment()\n+    getcomment();\n }\n \n \n if ($_GET['action'] == 'Edit') {\n"
+                },
+                {
+                    "date": 1678355396791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n-if ($_GET['action'] == 'createArticle') {\n+if ($_GET['action'] == 'findcomment') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n"
+                },
+                {
+                    "date": 1678355402944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n-if ($_GET['action'] == 'findcomment') {\n+if ($_GET['action'] == 'comment') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n"
+                },
+                {
+                    "date": 1678355408958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n }\n \n if ($_GET['action'] == 'comment') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    createArticle();\n+    getcomment();\n }\n \n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1678355421705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,10 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n-if ($_GET['action'] == 'comment') {\n-    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    getcomment();\n-}\n \n+\n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     getcomment();\n }\n"
+                },
+                {
+                    "date": 1678355455324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,8 @@\n     createArticle();\n }\n \n \n-\n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     getcomment();\n }\n"
+                },
+                {
+                    "date": 1678355484945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n \n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    getcomment();\n+    getcomment($id);\n }\n \n \n if ($_GET['action'] == 'Edit') {\n"
+                },
+                {
+                    "date": 1678355502101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n \n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    getcomment($id);\n+    getcomment();\n }\n \n \n if ($_GET['action'] == 'Edit') {\n"
+                },
+                {
+                    "date": 1678355673326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n \n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    getcomment();\n+    getcoment();\n }\n \n \n if ($_GET['action'] == 'Edit') {\n"
+                },
+                {
+                    "date": 1678367707815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n \n if ($_GET['action'] == 'affichecom') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n-    getcoment();\n+    getcomment();\n }\n \n \n if ($_GET['action'] == 'Edit') {\n@@ -50,8 +50,13 @@\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n \n+if ($_GET['action'] == 'Connect') {\n+    require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n+    connection();\n+}\n+\n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n    \n"
+                },
+                {
+                    "date": 1678367719550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,11 +50,11 @@\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n \n-if ($_GET['action'] == 'Connect') {\n+if ($_GET['action'] == 'commenter') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n-    connection();\n+    add\n }\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n"
+                },
+                {
+                    "date": 1678367726275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n }\n \n if ($_GET['action'] == 'commenter') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n-    add\n+    addComment();\n }\n \n if ($_GET['action'] == 'Admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n"
+                },
+                {
+                    "date": 1678367931512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     connection();\n }\n \n if ($_GET['action'] == 'commenter') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n+    require_once(dirname(__FILE__) . '/src/Controllers/postscontroller.php');\n     addComment();\n }\n \n if ($_GET['action'] == 'Admin') {\n"
+                },
+                {
+                    "date": 1678454041343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     connection();\n }\n \n if ($_GET['action'] == 'commenter') {\n-    require_once(dirname(__FILE__) . '/src/Controllers/postscontroller.php');\n+    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addComment();\n }\n \n if ($_GET['action'] == 'Admin') {\n@@ -69,8 +69,14 @@\n    \n    \n }\n \n+if ($_GET['action'] == 'Admincategorie') {\n+    require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n+    categorie();\n+   \n+   \n+}\n if ($_GET['action'] == 'adduser') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     add_user(); \n }\n"
+                },
+                {
+                    "date": 1678454264030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,10 @@\n    \n    \n }\n \n+\n+\n if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n     categorie();\n    \n"
+                },
+                {
+                    "date": 1678454278286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n }\n \n \n \n-if ($_GET['action'] == 'Admincategorie') {\n+if ($_GET['action'] == 'cat') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n     categorie();\n    \n    \n"
+                },
+                {
+                    "date": 1678456077291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,13 +69,19 @@\n    \n    \n }\n \n+if ($_GET['action'] == 'Admincategorie') {\n+    require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n+    categorie();\n+   \n+   \n+}\n \n \n if ($_GET['action'] == 'cat') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n-    categorie();\n+    createCategories();\n    \n    \n }\n if ($_GET['action'] == 'adduser') {\n"
+                },
+                {
+                    "date": 1678456084562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n    \n    \n }\n \n-if ($_GET['action'] == 'Admincategorie') {\n+if ($_GET['action'] == '') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n     categorie();\n    \n    \n"
+                },
+                {
+                    "date": 1678456092019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,11 +69,11 @@\n    \n    \n }\n \n-if ($_GET['action'] == '') {\n+if ($_GET['action'] == 'supcat') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n-    categorie();\n+    \n    \n    \n }\n \n"
+                },
+                {
+                    "date": 1678456110997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n }\n \n if ($_GET['action'] == 'supcat') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n-    \n+    deletecategory\n    \n    \n }\n \n"
+                },
+                {
+                    "date": 1679412636510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-if (isset($_GET['action'])) {\n+if (isset($_GET['action']) ) {\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n@@ -71,9 +71,9 @@\n }\n \n if ($_GET['action'] == 'supcat') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n-    deletecategory\n+    deletecategory();\n    \n    \n }\n \n"
+                },
+                {
+                    "date": 1679412643267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-if (isset($_GET['action']) ) {\n+if (isset($_GET['action']) && $_SESSION) {\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n"
+                },
+                {
+                    "date": 1679412666576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php \n-if (isset($_GET['action']) && $_SESSION) {\n+sess\n+if (isset($_GET['action']) && $_SESSION['user']) {\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n"
+                },
+                {
+                    "date": 1679412671843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-sess\n+session_start();\n if (isset($_GET['action']) && $_SESSION['user']) {\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679412678882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php \n session_start();\n+\n if (isset($_GET['action']) && $_SESSION['user']) {\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679412687786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n session_start();\n-\n+var_dump($_SESSION)\n if (isset($_GET['action']) && $_SESSION['user']) {\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679412704645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php \n session_start();\n-var_dump($_SESSION)\n-if (isset($_GET['action']) && $_SESSION['user']) {\n+var_dump($_SESSION);\n+if (isset($_GET['action']) && isset $_SESSION['user']) {\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n"
+                },
+                {
+                    "date": 1679412711310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php \n session_start();\n var_dump($_SESSION);\n-if (isset($_GET['action']) && isset $_SESSION['user']) {\n+if (isset($_GET['action']) && isset( $_SESSION['user'])){\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n"
+                },
+                {
+                    "date": 1679412745248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n session_start();\n-var_dump($_SESSION);\n+\n if (isset($_GET['action']) && isset( $_SESSION['user'])){\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679412963318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php \n session_start();\n \n-if (isset($_GET['action']) && isset( $_SESSION['user'])){\n+if (isset($_GET['action'])){\n \n  if ($_GET['action'] == 'display') {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n"
+                },
+                {
+                    "date": 1679412969443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n session_start();\n \n if (isset($_GET['action'])){\n \n- if ($_GET['action'] == 'display') {\n+ if ($_GET['action'] == 'display'  && isset( $_SESSION['user']))) {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n     }\n if ($_GET['action'] == 'Home') {\n"
+                },
+                {
+                    "date": 1679412977874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n session_start();\n \n if (isset($_GET['action'])){\n \n- if ($_GET['action'] == 'display'  && isset( $_SESSION['user']))) {\n+ if ($_GET['action'] == 'display'  && isset( $_SESSION['user'])) {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n         getarticle();\n     }\n if ($_GET['action'] == 'Home') {\n@@ -20,9 +20,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n-if ($_GET['action'] == 'createArticle') {\n+if ($_GET['action'] == 'createArticle'  && isset( $_SESSION['user']))) {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n"
+                },
+                {
+                    "date": 1679412984692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,21 +20,21 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addArticle();\n }\n \n-if ($_GET['action'] == 'createArticle'  && isset( $_SESSION['user']))) {\n+if ($_GET['action'] == 'createArticle'  && isset( $_SESSION['user'])) {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     createArticle();\n }\n \n \n-if ($_GET['action'] == 'affichecom') {\n+if ($_GET['action'] == 'affichecom' && isset( $_SESSION['user'])) {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     getcomment();\n }\n \n \n-if ($_GET['action'] == 'Edit') {\n+if ($_GET['action'] == 'Edit' && isset( $_SESSION['user'])) {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     updateMessage();\n }\n \n"
+                },
+                {
+                    "date": 1679412997563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n if ($_GET['action'] == 'Delete') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     deleteArticle();\n }\n-if ($_GET['action'] == 'displayonepost') {\n+if ($_GET['action'] == 'displayonepost' {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n }\n"
+                },
+                {
+                    "date": 1679413025376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,15 +41,15 @@\n if ($_GET['action'] == 'Delete') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     deleteArticle();\n }\n-if ($_GET['action'] == 'displayonepost' {\n+if ($_GET['action'] == 'displayonepost' && isset( $_SESSION['user'])) {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n }\n \n-if ($_GET['action'] == 'Connect') {\n+if ($_GET['action'] == 'Connect' {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n \n"
+                },
+                {
+                    "date": 1679413035200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     DisplayOnePost();\n     \n }\n \n-if ($_GET['action'] == 'Connect' {\n+if ($_GET['action'] == 'Connect') {\n     require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n     connection();\n }\n \n"
+                },
+                {
+                    "date": 1679413133209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n if ($_GET['action'] == 'Delete') {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     deleteArticle();\n }\n-if ($_GET['action'] == 'displayonepost' && isset( $_SESSION['user'])) {\n+if ($_GET['action'] == 'displayonepost' ) {\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     DisplayOnePost();\n     \n }\n"
+                },
+                {
+                    "date": 1679413167519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n-session_start();\n \n+\n if (isset($_GET['action'])){\n \n  if ($_GET['action'] == 'display'  && isset( $_SESSION['user'])) {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679413186958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n+session_start();\n \n-\n if (isset($_GET['action'])){\n \n  if ($_GET['action'] == 'display'  && isset( $_SESSION['user'])) {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679413209855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n-session_start();\n \n+\n if (isset($_GET['action'])){\n \n  if ($_GET['action'] == 'display'  && isset( $_SESSION['user'])) {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679413231444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n+session_start();\n \n-\n if (isset($_GET['action'])){\n \n  if ($_GET['action'] == 'display'  && isset( $_SESSION['user'])) {\n         require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n"
+                },
+                {
+                    "date": 1679830883652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addComment();\n }\n \n-if ($_GET['action'] == 'Admin') {\n+if ($_GET['action'] == 'Admin' ) {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n    \n    \n"
+                },
+                {
+                    "date": 1679830894359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addComment();\n }\n \n-if ($_GET['action'] == 'Admin' ) {\n+if ($_GET['action'] == 'Admin' &&  if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n    \n    \n"
+                },
+                {
+                    "date": 1679830899448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addComment();\n }\n \n-if ($_GET['action'] == 'Admin' &&  if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {\n+if ($_GET['action'] == 'Admin' && isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n    \n    \n"
+                },
+                {
+                    "date": 1679830977339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,14 +57,17 @@\n     require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n     addComment();\n }\n \n-if ($_GET['action'] == 'Admin' && isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {\n+if ($_GET['action'] == 'Admin' && isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n     AdminPage();\n    \n    \n }\n+else {\n+    echo \"tu joues à quoi \"\n+}\n \n if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n     categorie();\n"
+                },
+                {
+                    "date": 1679830984907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n    \n    \n }\n else {\n-    echo \"tu joues à quoi \"\n+    echo \"tu joues à quoi , t'es pas un admin\"\n }\n \n if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n"
+                },
+                {
+                    "date": 1679831080917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,10 +64,11 @@\n    \n    \n }\n else {\n-    echo \"tu joues à quoi , t'es pas un admin\"\n+    echo \"tu joues à quoi , t'es pas un admin\";\n }\n+}\n \n if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n     categorie();\n"
+                },
+                {
+                    "date": 1679831106560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,13 +63,11 @@\n     AdminPage();\n    \n    \n }\n-else {\n-    echo \"tu joues à quoi , t'es pas un admin\";\n-}\n-}\n \n+\n+\n if ($_GET['action'] == 'Admincategorie') {\n     require_once(dirname(__FILE__) . '/src/controllers/categoriecontroller.php');\n     categorie();\n    \n"
+                },
+                {
+                    "date": 1679831123312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,9 @@\n }\n \n if ($_GET['action'] == 'Admin' && isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') {\n     require_once(dirname(__FILE__) . '/src/controllers/admincontroller.php');\n-    AdminPage();\n-   \n-   \n+    AdminPage();  \n }\n \n \n \n"
+                }
+            ],
+            "date": 1677851887825,
+            "name": "Commit-0",
+            "content": "<?php \nif (isset($_GET['action'])) {\n\n if ($_GET['action'] == 'display') {\n        require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n        getarticle();\n    }\nif ($_GET['action'] == 'Home') {\n    require_once(dirname(__FILE__) . '/src/controllers/homecontrollers.php'); \n    homepage();\n\n}\nif ($_GET['action'] == 'Register') {\n    require_once(dirname(__FILE__) . '/src/controllers/registercontroller.php');\n    registration();\n}\nif ($_GET['action'] == 'AddPost') {\n    require_once(dirname(__FILE__) . '/src/controllers/postscontroller.php');\n    \n}\n\nif ($_GET['action'] == 'Connect') {\n    require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n    connection();\n}\n\nif ($_GET['action'] == 'Connect') {\n    require_once(dirname(__FILE__) . '/src/Controllers/logincontroller.php');\n    connection();\n}\n}\n else {\nrequire_once(dirname(__FILE__) . '/src/controllers/homecontrollers.php');\nhomepage();\n}\n\n"
+        }
+    ]
+}

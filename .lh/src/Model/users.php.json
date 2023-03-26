@@ -1,0 +1,214 @@
+{
+    "sourceFile": "src/Model/users.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1678186738083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678186890340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n+ include\n \n-\n function registerUser(string $prenom, string $password, string $email, string $role)\n {\n     $con = connectionDataBase();\n     $req = $con->prepare(\"INSERT INTO users (prenom,Email,password,role) VALUES (:prenom,:Email,:password,:role)\");\n"
+                },
+                {
+                    "date": 1678186896983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n- include\n+ include'config\n \n function registerUser(string $prenom, string $password, string $email, string $role)\n {\n     $con = connectionDataBase();\n"
+                },
+                {
+                    "date": 1678186939279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n- include'config\n+ include('config.php';\n \n function registerUser(string $prenom, string $password, string $email, string $role)\n {\n     $con = connectionDataBase();\n"
+                },
+                {
+                    "date": 1678187056151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n- include('config.php';\n \n+include('database.php');\n function registerUser(string $prenom, string $password, string $email, string $role)\n {\n     $con = connectionDataBase();\n     $req = $con->prepare(\"INSERT INTO users (prenom,Email,password,role) VALUES (:prenom,:Email,:password,:role)\");\n"
+                },
+                {
+                    "date": 1678272259968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,4 +24,6 @@\n \n     return $user;\n \n }\n+\n+function \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272279849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,8 @@\n     return $user;\n \n }\n \n-function \n\\ No newline at end of file\n+function SelectAllUsers{\n+\n+    \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272310797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,16 @@\n     return $user;\n \n }\n \n-function SelectAllUsers{\n+function SelectAllUsers(){\n \n-    \n+    $db = connectionDataBase();\n+    $req = \"SELECT * FROM  users WHERE prenom = '$prenom'\";\n+    $userStatement = $db->prepare($req);\n+    $userStatement->execute();\n+    $user = $userStatement->fetch();\n+\n+    return $user;\n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272316379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n function SelectAllUsers(){\n \n     $db = connectionDataBase();\n-    $req = \"SELECT * FROM  users WHERE prenom = '$prenom'\";\n+    $req = \"SELECT * FROM  users ;\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n     $user = $userStatement->fetch();\n \n"
+                },
+                {
+                    "date": 1678272323901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,13 +28,13 @@\n \n function SelectAllUsers(){\n \n     $db = connectionDataBase();\n-    $req = \"SELECT * FROM  users ;\n+    $req = \"SELECT * FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n     $user = $userStatement->fetch();\n \n-    return $user;\n+    return $users;\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678272329142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,8 @@\n     $db = connectionDataBase();\n     $req = \"SELECT * FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n-    $user = $userStatement->fetch();\n+    $users = $userStatement->fetch();\n \n     return $users;\n-\n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678273294894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,7 @@\n     $db = connectionDataBase();\n     $req = \"SELECT * FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n-    $users = $userStatement->fetch();\n-\n+    $users = $userStatement->fetchAll();\n     return $users;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284142611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,7 @@\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n     $users = $userStatement->fetchAll();\n     return $users;\n-}\n\\ No newline at end of file\n+}\n+\n+function \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284148096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,5 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function \n\\ No newline at end of file\n+function delet\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284154154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,7 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function delet\n\\ No newline at end of file\n+function deletusers(){\n+\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284161273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,6 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function deletusers(){\n+function deleteUser(){\n \n\\ No newline at end of file\n-    \n"
+                },
+                {
+                    "date": 1678284166897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,4 +36,7 @@\n     return $users;\n }\n \n function deleteUser(){\n+\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284176033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,5 +38,10 @@\n \n function deleteUser(){\n \n \n+    $db = connectionDataBase();\n+    $req = \"SELECT * FROM  users \";\n+    $userStatement = $db->prepare($req);\n+    $userStatement->execute();\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284188636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,12 +36,11 @@\n     return $users;\n }\n \n function deleteUser(){\n-\n-\n+    \n     $db = connectionDataBase();\n-    $req = \"SELECT * FROM  users \";\n+    $req = \"DELETE * FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284578196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,10 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function deleteUser(){\n-    \n+function deleteUser($id){\n+\n     $db = connectionDataBase();\n     $req = \"DELETE * FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n"
+                },
+                {
+                    "date": 1678284600422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser($id){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE * FROM  users \";\n+    $req = \"DELETE * FROM  users where id = '$id'\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284742544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function deleteUser($id){\n+function deleteUser(){\n \n     $db = connectionDataBase();\n     $req = \"DELETE * FROM  users where id = '$id'\";\n     $userStatement = $db->prepare($req);\n"
+                },
+                {
+                    "date": 1678284771386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE * FROM  users where id = '$id'\";\n+    $req = \"DELETE  FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284920380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE  FROM  users \";\n+    $req = \"DELETE FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678284925581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users \";\n+    $req = \"DELETE * FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678285010953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE * FROM  users \";\n+    $req = \"DELETE FROM  users \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678285018263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users \";\n+    $req = \"DELETE FROM  users whre id \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678285025686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users whre id \";\n+    $req = \"DELETE FROM  users WH \";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678285034053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users WH \";\n+    $req = \"DELETE FROM  users WHERE user_id =\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678285039171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users WHERE user_id =\";\n+    $req = \"DELETE FROM  users WHERE user_id = $i\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678285045556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser(){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users WHERE user_id = $i\";\n+    $req = \"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678285052217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function deleteUser(){\n+function deleteUser($id){\n \n     $db = connectionDataBase();\n     $req = \"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n"
+                },
+                {
+                    "date": 1678290484316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function deleteUser($id){\n+function deleteUser($id ){\n \n     $db = connectionDataBase();\n     $req = \"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n"
+                },
+                {
+                    "date": 1678290929763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     $con = connectionDataBase();\n     $req = $con->prepare(\"INSERT INTO users (prenom,Email,password,role) VALUES (:prenom,:Email,:password,:role)\");\n     $req->execute(\n         array(\n+            'id'\n             ':prenom' => $prenom,\n             ':password' => $password,\n             ':role' => $role,\n             ':Email' => $email\n@@ -35,9 +36,9 @@\n     $users = $userStatement->fetchAll();\n     return $users;\n }\n \n-function deleteUser($id ){\n+function deleteUser($id){\n \n     $db = connectionDataBase();\n     $req = \"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n"
+                },
+                {
+                    "date": 1678290935080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     $con = connectionDataBase();\n     $req = $con->prepare(\"INSERT INTO users (prenom,Email,password,role) VALUES (:prenom,:Email,:password,:role)\");\n     $req->execute(\n         array(\n-            'id'\n+            ':id':\n             ':prenom' => $prenom,\n             ':password' => $password,\n             ':role' => $role,\n             ':Email' => $email\n"
+                },
+                {
+                    "date": 1678291042071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n     $con = connectionDataBase();\n     $req = $con->prepare(\"INSERT INTO users (prenom,Email,password,role) VALUES (:prenom,:Email,:password,:role)\");\n     $req->execute(\n         array(\n-            ':id':\n             ':prenom' => $prenom,\n             ':password' => $password,\n             ':role' => $role,\n             ':Email' => $email\n"
+                },
+                {
+                    "date": 1678291072823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,6 +41,6 @@\n     $db = connectionDataBase();\n     $req = \"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n-\n+     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678291113025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser($id){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users WHERE id = $id\";\n+    $req = \"DELETE FROM  user WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678291118829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser($id){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  user WHERE id = $id\";\n+    $req = \"DELETE FROM  users WHERE user_id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678291138989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser($id){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users WHERE user_id = $id\";\n+    $req = \"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678291149686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser($id){\n \n     $db = connectionDataBase();\n-    $req = \"DELETE FROM  users WHERE id = $id\";\n+    $req =\"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678291235050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n }\n \n function deleteUser($id){\n \n-    $db = connectionDataBase();\n+    $d = connectionDataBase();\n     $req =\"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n      \n"
+                },
+                {
+                    "date": 1678291241442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n }\n \n function deleteUser($id){\n \n-    $d = connectionDataBase();\n+    $C = connectionDataBase();\n     $req =\"DELETE FROM  users WHERE id = $id\";\n     $userStatement = $db->prepare($req);\n     $userStatement->execute();\n      \n"
+                },
+                {
+                    "date": 1678291254145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n }\n \n function deleteUser($id){\n \n-    $C = connectionDataBase();\n+    $Connect = connectionDataBase();\n     $req =\"DELETE FROM  users WHERE id = $id\";\n-    $userStatement = $db->prepare($req);\n+    $userStatement = $Connec->prepare($req);\n     $userStatement->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678291262156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,8 @@\n function deleteUser($id){\n \n     $Connect = connectionDataBase();\n     $req =\"DELETE FROM  users WHERE id = $id\";\n-    $userStatement = $Connec->prepare($req);\n+    $delet = $Connect->prepare($req);\n     $userStatement->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678291267558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n \n     $Connect = connectionDataBase();\n     $req =\"DELETE FROM  users WHERE id = $id\";\n     $delet = $Connect->prepare($req);\n-    $userStatement->execute();\n+    $delet->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678292080308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n function deleteUser($id){\n \n     $Connect = connectionDataBase();\n-    $req =\"DELETE FROM  users WHERE id = $id\";\n+    $req =\"DELETE FROM users WHERE id = $id\";\n     $delet = $Connect->prepare($req);\n     $delet->execute();\n      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678292093540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,6 @@\n     $req =\"DELETE FROM users WHERE id = $id\";\n     $delet = $Connect->prepare($req);\n     $delet->execute();\n      \n-}\n\\ No newline at end of file\n+}\n+var\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678292109541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,7 +41,7 @@\n     $Connect = connectionDataBase();\n     $req =\"DELETE FROM users WHERE id = $id\";\n     $delet = $Connect->prepare($req);\n     $delet->execute();\n-     \n+    var_dump($id);\n }\n\\ No newline at end of file\n-var\n+var_dump($id);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678292120706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,7 +41,6 @@\n     $Connect = connectionDataBase();\n     $req =\"DELETE FROM users WHERE id = $id\";\n     $delet = $Connect->prepare($req);\n     $delet->execute();\n-    var_dump($id);\n+    \n }\n\\ No newline at end of file\n-var_dump($id);\n"
+                }
+            ],
+            "date": 1678186738083,
+            "name": "Commit-0",
+            "content": "<?php\n\n\nfunction registerUser(string $prenom, string $password, string $email, string $role)\n{\n    $con = connectionDataBase();\n    $req = $con->prepare(\"INSERT INTO users (prenom,Email,password,role) VALUES (:prenom,:Email,:password,:role)\");\n    $req->execute(\n        array(\n            ':prenom' => $prenom,\n            ':password' => $password,\n            ':role' => $role,\n            ':Email' => $email\n        )\n    );\n}\nfunction getUserByName($prenom)\n{\n    $db = connectionDataBase();\n    $req = \"SELECT * FROM  users WHERE prenom = '$prenom'\";\n    $userStatement = $db->prepare($req);\n    $userStatement->execute();\n    $user = $userStatement->fetch();\n\n    return $user;\n\n}\n"
+        }
+    ]
+}

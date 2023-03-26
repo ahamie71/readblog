@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/controllers/categoriecontroller.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1678279863606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678279884450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n <?php \n+\n+session_start();\n+require_once(dirname(__FILE__, 2) . '/Model/users.php');\n+\n+function AdminPage()\n+{    \n+    $users=SelectAllUsers(); \n+    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+    $categories=getCategory();    \n+}\n"
+                },
+                {
+                    "date": 1678279890492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php \n \n session_start();\n-require_once(dirname(__FILE__, 2) . '/Model/users.php');\n+require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n \n function AdminPage()\n {    \n     $users=SelectAllUsers(); \n"
+                },
+                {
+                    "date": 1678279906792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n \n function AdminPage()\n {    \n-    $users=SelectAllUsers(); \n+    \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $categories=getCategory();    \n }\n"
+                },
+                {
+                    "date": 1678279914741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n session_start();\n require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n \n-function AdminPage()\n+function categorie()\n {    \n     \n     require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n"
+                },
+                {
+                    "date": 1678280221220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \n function categorie()\n {    \n     \n-    require_once(dirname(__FILE__, 2) . '/templates/admin.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $categories=getCategory();    \n }\n"
+                },
+                {
+                    "date": 1678280226258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \n function categorie()\n {    \n     \n-    require_once(dirname(__FILE__, 2) . '/templates/.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/categorie.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $categories=getCategory();    \n }\n"
+                },
+                {
+                    "date": 1678280234631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \n function categorie()\n {    \n     \n-    require_once(dirname(__FILE__, 2) . '/templates/categorie.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n     $categories=getCategory();    \n }\n"
+                },
+                {
+                    "date": 1678280566301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n function categorie()\n {    \n     \n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n-    require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n+    \n     $categories=getCategory();    \n }\n"
+                },
+                {
+                    "date": 1678280716490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,6 @@\n function categorie()\n {    \n     \n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n-    \n     $categories=getCategory();    \n }\n"
+                },
+                {
+                    "date": 1678280723651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n function categorie()\n {    \n     \n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n-    $categories=getCategory();    \n+    $categories=getCategory();  \n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php');  \n }\n"
+                },
+                {
+                    "date": 1678280776346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n {    \n     \n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n     $categories=getCategory();  \n-    require_once(dirname(__FILE__, 2) . '/Model/articles.php');  \n+    require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n+    $categories=getCategory();   \n }\n"
+                },
+                {
+                    "date": 1678280782043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,7 @@\n function categorie()\n {    \n     \n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n-    $categories=getCategory();  \n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n     $categories=getCategory();   \n }\n"
+                },
+                {
+                    "date": 1678280829439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n require_once(dirname(__FILE__, 2) . '/Model/articles.php');\n \n function categorie()\n {    \n-    \n+    $categories=getCategory(); \n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n     require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n     $categories=getCategory();   \n }\n"
+                },
+                {
+                    "date": 1678454068509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n function categorie()\n {    \n     $categories=getCategory(); \n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n-    require_once(dirname(__FILE__, 2) . '/Model/articles.php'); \n-    $categories=getCategory();   \n+     \n }\n+\n"
+                },
+                {
+                    "date": 1678454074168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,5 @@\n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n      \n }\n \n+function \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454081577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,5 @@\n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n      \n }\n \n-function \n\\ No newline at end of file\n+function createCateg\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454092569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,9 @@\n     require_once(dirname(__FILE__, 2) . '/templates/admincategorie.phtml');\n      \n }\n \n-function createCateg\n\\ No newline at end of file\n+function createCategories(){\n+\n+\n+    if\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454098869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n function createCategories(){\n \n \n-    if\n+    if(isset($))\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454104167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n function createCategories(){\n \n \n-    if(isset($))\n+    if(isset($_POST[]))\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454109803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n function createCategories(){\n \n \n-    if(isset($_POST[]))\n+    if(isset($_POST['name']))\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454117085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n function createCategories(){\n \n \n-    if(isset($_POST['name']))\n+    if(isset($_POST['name']) &&)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454122946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n function createCategories(){\n \n \n-    if(isset($_POST['name']) &&)\n+    if(isset($_POST['name']) && isset ())\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454128348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n \n function createCategories(){\n \n \n-    if(isset($_POST['name']) && isset ())\n+    if(isset($_POST['name']) && isset ($_POST['description']) && isset ($_POST[')\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454135001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,9 @@\n \n function createCategories(){\n \n \n-    if(isset($_POST['name']) && isset ($_POST['description']) && isset ($_POST[')\n+    if(isset($_POST['name']) && isset ($_POST['description'])){\n+\n+        \n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454141723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \n \n     if(isset($_POST['name']) && isset ($_POST['description'])){\n \n-        \n+        $name= $\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454149720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,8 @@\n \n \n     if(isset($_POST['name']) && isset ($_POST['description'])){\n \n-        $name= $\n+        $name= $_POST['name'];\n+        $content= $_POST['content'];\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454155574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,7 @@\n     if(isset($_POST['name']) && isset ($_POST['description'])){\n \n         $name= $_POST['name'];\n         $content= $_POST['content'];\n+        \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678454175626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,7 @@\n     if(isset($_POST['name']) && isset ($_POST['description'])){\n \n         $name= $_POST['name'];\n         $content= $_POST['content'];\n-        createcatgeory\n+        createcatgeory()\n     }\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1678279863606,
+            "name": "Commit-0",
+            "content": "<?php \n"
+        }
+    ]
+}

@@ -1,0 +1,258 @@
+{
+    "sourceFile": "src/Model/categories.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 60,
+            "patches": [
+                {
+                    "date": 1678014435390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678014441126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\n+\n function getCategory(){\n \n $Connect = connectionDataBase();\n $Connect = connectionDataBase();\n"
+                },
+                {
+                    "date": 1678014446485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-\n-\n+<?php \n function getCategory(){\n \n $Connect = connectionDataBase();\n $Connect = connectionDataBase();\n"
+                },
+                {
+                    "date": 1678014881423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <?php \n+include('database.php');\n function getCategory(){\n \n $Connect = connectionDataBase();\n $Connect = connectionDataBase();\n@@ -7,6 +8,5 @@\n $search = $Connect->prepare($sql);\n $search->execute();\n $categories = $search->fetch();\n return $categories;\n-\n }\n"
+                },
+                {
+                    "date": 1678015201508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <?php \n include('database.php');\n function getCategory(){\n \n+\n $Connect = connectionDataBase();\n-$Connect = connectionDataBase();\n $sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n $categories = $search->fetch();\n"
+                },
+                {
+                    "date": 1678024123954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch();\n+$categories = $search->fetch($pdo);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678024131501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch($pdo);\n+$categories = $search->fetch(PDO::);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678024137970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch(PDO::);\n+$categories = $search->fetch(PDO::FETCH);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678092031707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n function getCategory(){\n \n \n $Connect = connectionDataBase();\n-$sql = \"SELECT * FROM categories\";\n+$sql = \"SELECT name * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch(PDO::FETCH);\n+$categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678131616117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <?php \n-include('database.php');\n+\n function getCategory(){\n \n \n $Connect = connectionDataBase();\n-$sql = \"SELECT name * FROM categories\";\n+$sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n $categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n"
+                },
+                {
+                    "date": 1678131623190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-\n+include('database.php');\n function getCategory(){\n \n \n $Connect = connectionDataBase();\n"
+                },
+                {
+                    "date": 1678182891566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function getCategory(){\n \n \n $Connect = connectionDataBase();\n-$sql = \"SELECT name FROM categories\";\n+$sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n $categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n"
+                },
+                {
+                    "date": 1678182914806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch(PDO::FETCH_ASSOC);\n+$categories = $search->fetch();\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678183139135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch();\n+$categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678183154534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch(PDO::FETCH_ASSOC);\n+$categories = $search->fetchAll(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678183184177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n function getCategory(){\n \n \n $Connect = connectionDataBase();\n-$sql = \"SELECT * FROM categories\";\n+$sql = \"SELECT  FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetchAll(PDO::FETCH_ASSOC);\n+$categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678183216530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n <?php \n include('database.php');\n function getCategory(){\n-\n-\n $Connect = connectionDataBase();\n-$sql = \"SELECT  FROM categories\";\n+$sql = \"SELECT * FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n $categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n"
+                },
+                {
+                    "date": 1678183247535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php \n include('database.php');\n function getCategory(){\n $Connect = connectionDataBase();\n-$sql = \"SELECT * FROM categories\";\n+$sql = \"SELECT  name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n $categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n"
+                },
+                {
+                    "date": 1678183260779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT  name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch(PDO::FETCH_ASSOC);\n+$categories = $search->fetchAll(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678183268792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT  name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetchAll(PDO::FETCH_ASSOC);\n+$categories = $search->(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678183273836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT  name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->(PDO::FETCH_ASSOC);\n+$categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678183596931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php \n include('database.php');\n function getCategory(){\n $Connect = connectionDataBase();\n-$sql = \"SELECT  name FROM categories\";\n+$sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n $categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n"
+                },
+                {
+                    "date": 1678184034398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-include('database.php');\n+\n function getCategory(){\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n"
+                },
+                {
+                    "date": 1678184045142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-\n+include('database.php');\n function getCategory(){\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n"
+                },
+                {
+                    "date": 1678184320460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-include('database.php');\n+include_once('database.php');\n function getCategory(){\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n"
+                },
+                {
+                    "date": 1678184364158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch(PDO::FETCH_ASSOC);\n+$categories = $search->fetchAll();\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678184373259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetchAll();\n+$categories = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678184534271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php \n-include_once('database.php');\n+include('database.php');\n function getCategory(){\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n"
+                },
+                {
+                    "date": 1678184972759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$categories = $search->fetch(PDO::FETCH_ASSOC);\n+$cat = $search->fetch(PDO::FETCH_ASSOC);\n return $categories;\n }\n"
+                },
+                {
+                    "date": 1678184981651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$cat = $search->fetch(PDO::FETCH_ASSOC);\n-return $categories;\n+$catsz = $search->fetch(PDO::FETCH_ASSOC);\n+return $cats;\n }\n"
+                },
+                {
+                    "date": 1678185121328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n $Connect = connectionDataBase();\n $sql = \"SELECT name FROM categories\";\n $search = $Connect->prepare($sql);\n $search->execute();\n-$catsz = $search->fetch(PDO::FETCH_ASSOC);\n-return $cats;\n+$categories = $search->fetch(PDO::FETCH_ASSOC);\n+return $categories;\n }\n"
+                },
+                {
+                    "date": 1678185329091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,20 @@\n <?php \n include('database.php');\n-function getCategory(){\n-$Connect = connectionDataBase();\n-$sql = \"SELECT name FROM categories\";\n-$search = $Connect->prepare($sql);\n-$search->execute();\n-$categories = $search->fetch(PDO::FETCH_ASSOC);\n-return $categories;\n+{\n+    $db = connectionDataBase();\n+    $stmt = $db->prepare(\"SELECT * FROM messages \");\n+    $stmt->execute();\n+    $msgs = [];\n+    while (($row = $stmt->fetch())) {\n+        $msg = [\n+\n+            'content' => $row['content'],\n+            'createdAt' => $row['createdAt'],\n+            'id' => $row['id'],\n+            'user_id' => $row['user_id'],\n+        ];\n+        $msgs[] = $msg;\n+    }\n+    return $msgs;\n }\n+}\n"
+                },
+                {
+                    "date": 1678185334174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php \n include('database.php');\n {\n     $db = connectionDataBase();\n-    $stmt = $db->prepare(\"SELECT * FROM messages \");\n+    $stmt = $db->prepare(\"SELECT * FROM categ \");\n     $stmt->execute();\n     $msgs = [];\n     while (($row = $stmt->fetch())) {\n         $msg = [\n@@ -16,5 +16,5 @@\n         $msgs[] = $msg;\n     }\n     return $msgs;\n }\n-}\n+\n"
+                },
+                {
+                    "date": 1678185341549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <?php \n include('database.php');\n {\n     $db = connectionDataBase();\n-    $stmt = $db->prepare(\"SELECT * FROM categ \");\n+    $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n-    $msgs = [];\n+    $cats = [];\n     while (($row = $stmt->fetch())) {\n         $msg = [\n \n             'content' => $row['content'],\n"
+                },
+                {
+                    "date": 1678185346685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $cats = [];\n     while (($row = $stmt->fetch())) {\n-        $msg = [\n+        $cat = [\n \n             'content' => $row['content'],\n             'createdAt' => $row['createdAt'],\n             'id' => $row['id'],\n"
+                },
+                {
+                    "date": 1678185358123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $cats = [];\n     while (($row = $stmt->fetch())) {\n-        $cat = [\n+        $cats = [\n \n             'content' => $row['content'],\n             'createdAt' => $row['createdAt'],\n             'id' => $row['id'],\n"
+                },
+                {
+                    "date": 1678185363882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     $cats = [];\n     while (($row = $stmt->fetch())) {\n         $cats = [\n \n-            'content' => $row['content'],\n+            'name' => $row['name'],\n             'createdAt' => $row['createdAt'],\n             'id' => $row['id'],\n             'user_id' => $row['user_id'],\n         ];\n"
+                },
+                {
+                    "date": 1678185369623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n     while (($row = $stmt->fetch())) {\n         $cats = [\n \n             'name' => $row['name'],\n-            'createdAt' => $row['createdAt'],\n             'id' => $row['id'],\n+            'id' => $row['id'],\n             'user_id' => $row['user_id'],\n         ];\n         $msgs[] = $msg;\n     }\n"
+                },
+                {
+                    "date": 1678185384777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,15 @@\n {\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n-    $cats = [];\n+    $catego = [];\n     while (($row = $stmt->fetch())) {\n         $cats = [\n \n             'name' => $row['name'],\n             'id' => $row['id'],\n-            'id' => $row['id'],\n-            'user_id' => $row['user_id'],\n+          \n         ];\n         $msgs[] = $msg;\n     }\n     return $msgs;\n"
+                },
+                {
+                    "date": 1678185391391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n {\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n-    $catego = [];\n+    $categories = [];\n     while (($row = $stmt->fetch())) {\n-        $cats = [\n+        $categories = [\n \n             'name' => $row['name'],\n             'id' => $row['id'],\n           \n"
+                },
+                {
+                    "date": 1678185402489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             'name' => $row['name'],\n             'id' => $row['id'],\n           \n         ];\n-        $msgs[] = $msg;\n+        $categories[] = $msg;\n     }\n     return $msgs;\n }\n \n"
+                },
+                {
+                    "date": 1678185408966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             'name' => $row['name'],\n             'id' => $row['id'],\n           \n         ];\n-        $categories[] = $msg;\n+        $categories[] = $categorie;\n     }\n     return $msgs;\n }\n \n"
+                },
+                {
+                    "date": 1678185415322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n           \n         ];\n         $categories[] = $categorie;\n     }\n-    return $msgs;\n+    return $categorie;\n }\n \n"
+                },
+                {
+                    "date": 1678185501363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <?php \n include('database.php');\n+\n+\n {\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n@@ -13,7 +15,7 @@\n           \n         ];\n         $categories[] = $categorie;\n     }\n-    return $categorie;\n+    return $categories;\n }\n \n"
+                },
+                {
+                    "date": 1678185509215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php \n include('database.php');\n \n \n-{\n+function {\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n"
+                },
+                {
+                    "date": 1678185515962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php \n include('database.php');\n \n \n-function {\n+function getCategory{\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n"
+                },
+                {
+                    "date": 1678185542439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n <?php \n include('database.php');\n \n \n-function getCategory{\n+function getCategory(){\n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n-        $categories = [\n+        $categorie = [\n \n             'name' => $row['name'],\n             'id' => $row['id'],\n           \n"
+                },
+                {
+                    "date": 1678186605711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n \n function getCategory(){\n     $db = connectionDataBase();\n+    \n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n"
+                },
+                {
+                    "date": 1678186610822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n include('database.php');\n \n \n function getCategory(){\n-    $db = connectionDataBase();\n-    \n+    include('database.php');\n+  \n+\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n"
+                },
+                {
+                    "date": 1678186617085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n \n function getCategory(){\n     include('database.php');\n-  \n+    $db = connectionDataBase();\n \n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n"
+                },
+                {
+                    "date": 1678186729057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <?php \n-include('database.php');\n \n \n+\n function getCategory(){\n-    include('database.php');\n+  \n     $db = connectionDataBase();\n \n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n"
+                },
+                {
+                    "date": 1678187063873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n \n \n function getCategory(){\n-  \n+    include('database.php');\n     $db = connectionDataBase();\n \n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n"
+                },
+                {
+                    "date": 1678187070636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php \n+i\n \n \n-\n function getCategory(){\n     include('database.php');\n     $db = connectionDataBase();\n \n"
+                },
+                {
+                    "date": 1678187299581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <?php \n-i\n \n \n+\n function getCategory(){\n-    include('database.php');\n+    \n     $db = connectionDataBase();\n \n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n"
+                },
+                {
+                    "date": 1678187922559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n \n \n function getCategory(){\n     \n-    $db = connectionDataBase();\n-\n+    $db = connectionDataBase()\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n"
+                },
+                {
+                    "date": 1678188516880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <?php \n \n+include\n \n-\n function getCategory(){\n     \n-    $db = connectionDataBase()\n+    $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n     $stmt->execute();\n     $categories = [];\n     while (($row = $stmt->fetch())) {\n"
+                },
+                {
+                    "date": 1678188523981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n \n-include\n+include'data\n \n function getCategory(){\n     \n     $db = connectionDataBase();\n"
+                },
+                {
+                    "date": 1678188545950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php \n \n-include'data\n+include('database.php';\n \n function getCategory(){\n     \n     $db = connectionDataBase();\n"
+                },
+                {
+                    "date": 1678189002208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php \n \n-include('database.php';\n \n+\n function getCategory(){\n     \n     $db = connectionDataBase();\n     $stmt = $db->prepare(\"SELECT * FROM categories \");\n"
+                },
+                {
+                    "date": 1678189008348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,6 @@\n <?php \n \n \n \n-function getCategory(){\n-    \n-    $db = connectionDataBase();\n-    $stmt = $db->prepare(\"SELECT * FROM categories \");\n-    $stmt->execute();\n-    $categories = [];\n-    while (($row = $stmt->fetch())) {\n-        $categorie = [\n \n-            'name' => $row['name'],\n-            'id' => $row['id'],\n-          \n-        ];\n-        $categories[] = $categorie;\n-    }\n-    return $categories;\n-}\n \n"
+                },
+                {
+                    "date": 1678189041765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-<?php \n \n \n \n \n \n+\n"
+                }
+            ],
+            "date": 1678014435390,
+            "name": "Commit-0",
+            "content": "function getCategory(){\n\n$Connect = connectionDataBase();\n$Connect = connectionDataBase();\n$sql = \"SELECT * FROM categories\";\n$search = $Connect->prepare($sql);\n$search->execute();\n$categories = $search->fetch();\nreturn $categories;\n\n}\n"
+        }
+    ]
+}

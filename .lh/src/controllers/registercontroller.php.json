@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/controllers/registercontroller.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1677852993581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677852998734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n             $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n             require_once(dirname(__FILE__, 2) . '/Model/users.php');\n             registerUser($prenom, $pass, $email, $role);\n-            header\n+            header(location)\n            \n         }\n     } else {\n         require_once(dirname(__FILE__, 2) . '/templates/registration.phtml');\n"
+                },
+                {
+                    "date": 1677853005049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n             $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n             require_once(dirname(__FILE__, 2) . '/Model/users.php');\n             registerUser($prenom, $pass, $email, $role);\n-            header(location)\n+            header('location:index.php')\n            \n         }\n     } else {\n         require_once(dirname(__FILE__, 2) . '/templates/registration.phtml');\n"
+                },
+                {
+                    "date": 1677853011768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n             $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n             require_once(dirname(__FILE__, 2) . '/Model/users.php');\n             registerUser($prenom, $pass, $email, $role);\n-            header('location:index.php')\n+            header('location:index.php);\n            \n         }\n     } else {\n         require_once(dirname(__FILE__, 2) . '/templates/registration.phtml');\n"
+                },
+                {
+                    "date": 1677853021400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n             $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n             require_once(dirname(__FILE__, 2) . '/Model/users.php');\n             registerUser($prenom, $pass, $email, $role);\n-            header('location:index.php);\n+            header('location:index.php?action=connect');\n            \n         }\n     } else {\n         require_once(dirname(__FILE__, 2) . '/templates/registration.phtml');\n"
+                },
+                {
+                    "date": 1677853075108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n             $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n             require_once(dirname(__FILE__, 2) . '/Model/users.php');\n             registerUser($prenom, $pass, $email, $role);\n-            header('location:index.php?action=connect');\n+            header('location:index.php?action=Connect');\n            \n         }\n     } else {\n         require_once(dirname(__FILE__, 2) . '/templates/registration.phtml');\n"
+                },
+                {
+                    "date": 1678131876921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <?php\n+\n function registration()\n {\n     if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n         $prenom = $_POST['prenom'];\n"
+                },
+                {
+                    "date": 1678284125793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,6 @@\n     } else {\n         require_once(dirname(__FILE__, 2) . '/templates/registration.phtml');\n \n     }\n-}\n\\ No newline at end of file\n+}\n+\n"
+                }
+            ],
+            "date": 1677852993581,
+            "name": "Commit-0",
+            "content": "<?php\nfunction registration()\n{\n    if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n        $prenom = $_POST['prenom'];\n        $email = $_POST['email'];\n        $password = $_POST['password'];\n        $password2 = $_POST['password2'];\n        $role = \"user\";\n        if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n            $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n            require_once(dirname(__FILE__, 2) . '/Model/users.php');\n            registerUser($prenom, $pass, $email, $role);\n            header\n           \n        }\n    } else {\n        require_once(dirname(__FILE__, 2) . '/templates/registration.phtml');\n\n    }\n}"
+        }
+    ]
+}

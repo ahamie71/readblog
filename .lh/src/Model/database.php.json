@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/Model/database.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1678131793816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678131886275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n <?php\n+\n+\n function connectionDataBase()\n {\n     try {\n         return new PDO('mysql:host=localhost;dbname=mBlog;charset=utf8', 'root', 'root');\n"
+                },
+                {
+                    "date": 1678131919667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n <?php\n-\n-\n function connectionDataBase()\n {\n     try {\n         return new PDO('mysql:host=localhost;dbname=mBlog;charset=utf8', 'root', 'root');\n"
+                }
+            ],
+            "date": 1678131793816,
+            "name": "Commit-0",
+            "content": "<?php\nfunction connectionDataBase()\n{\n    try {\n        return new PDO('mysql:host=localhost;dbname=mBlog;charset=utf8', 'root', 'root');\n    } catch (Exception $e) {\n        die('Erreur : ' . $e->getMessage());\n    }\n}\n"
+        }
+    ]
+}

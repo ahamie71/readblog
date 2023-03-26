@@ -1,0 +1,206 @@
+{
+    "sourceFile": "src/templates/displayposts.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 47,
+            "patches": [
+                {
+                    "date": 1677858189329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677858212228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,12 +34,13 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n+                        \n                     </div>\n                 </div>\n                 </div>\n                 <?php endforeach; ?>\n-                \n+\n             </div>\n         </div>\n     \n"
+                },
+                {
+                    "date": 1677858247794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         \n+\n                     </div>\n                 </div>\n                 </div>\n                 <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858256921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                        \n+                        <h1> <?php </h1>\n \n                     </div>\n                 </div>\n                 </div>\n"
+                },
+                {
+                    "date": 1677858263679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                        <h1> <?php </h1>\n+                         \n \n                     </div>\n                 </div>\n                 </div>\n"
+                },
+                {
+                    "date": 1677858274947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                         \n+                         Ecrit dans la categorie \n \n                     </div>\n                 </div>\n                 </div>\n"
+                },
+                {
+                    "date": 1677858280359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                         Ecrit dans la categorie \n+                         \n \n                     </div>\n                 </div>\n                 </div>\n"
+                },
+                {
+                    "date": 1677858286900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,14 +34,14 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                         \n+                        <?php endforeach; ?>\n \n                     </div>\n                 </div>\n                 </div>\n-                <?php endforeach; ?>\n+              \n \n             </div>\n         </div>\n     \n"
+                },
+                {
+                    "date": 1677858294426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \n                     </div>\n                 </div>\n                 </div>\n-              \n+                <?php foreach($articles as $post):?>\n \n             </div>\n         </div>\n     \n"
+                },
+                {
+                    "date": 1677858304401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,5 +43,5 @@\n                 <?php foreach($articles as $post):?>\n \n             </div>\n         </div>\n-    \n+        <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858313608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,8 @@\n                     </div>\n                 </div>\n                 </div>\n                 <?php foreach($articles as $post):?>\n-\n+                  \n             </div>\n         </div>\n         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858319534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \n                     </div>\n                 </div>\n                 </div>\n-                <?php foreach($articles as $post):?>\n+                <?php foreach($catego as $post):?>\n                   \n             </div>\n         </div>\n         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858326371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \n                     </div>\n                 </div>\n                 </div>\n-                <?php foreach($catego as $post):?>\n+                <?php foreach($categories as $category):?>\n                   \n             </div>\n         </div>\n         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858334105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,8 @@\n                     </div>\n                 </div>\n                 </div>\n                 <?php foreach($categories as $category):?>\n-                  \n+                   dans la categorie \n             </div>\n         </div>\n         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858341208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,8 @@\n                     </div>\n                 </div>\n                 </div>\n                 <?php foreach($categories as $category):?>\n-                   dans la categorie \n+                   dans la categorie<?php e\n             </div>\n         </div>\n         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858346677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,8 @@\n                     </div>\n                 </div>\n                 </div>\n                 <?php foreach($categories as $category):?>\n-                   dans la categorie<?php e\n+                   dans la categorie<?php echo $category['\n             </div>\n         </div>\n         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858354063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,8 @@\n                     </div>\n                 </div>\n                 </div>\n                 <?php foreach($categories as $category):?>\n-                   dans la categorie<?php echo $category['\n+                   dans la categorie<?php echo $category['name']?>\n             </div>\n         </div>\n         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677858394508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n \n+                        \n                     </div>\n                 </div>\n                 </div>\n                 <?php foreach($categories as $category):?>\n"
+                },
+                {
+                    "date": 1677858403061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,14 +35,15 @@\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n+                        <?php foreach($categories as $category):?>\n+                   dans la categorie<?php echo $category['name']?>\n+            </div>\n+        </div>\n+        <?php endforeach; ?>\n \n-                        \n+\n                     </div>\n                 </div>\n                 </div>\n-                <?php foreach($categories as $category):?>\n-                   dans la categorie<?php echo $category['name']?>\n-            </div>\n-        </div>\n-        <?php endforeach; ?>\n+               \n"
+                },
+                {
+                    "date": 1677858510284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n                         <?php foreach($categories as $category):?>\n-                   dans la categorie<?php echo $category['name']?>\n+                   dans la categorie<?php echo s$category['name']?>\n             </div>\n         </div>\n         <?php endforeach; ?>\n \n"
+                },
+                {
+                    "date": 1677858522258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n                         <?php foreach($categories as $category):?>\n-                   dans la categorie<?php echo s$category['name']?>\n+                   dans la categorie<?php echo ($category['name'])?>\n             </div>\n         </div>\n         <?php endforeach; ?>\n \n"
+                },
+                {
+                    "date": 1677858565043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n                         <?php foreach($categories as $category):?>\n-                   dans la categorie<?php echo ($category['name'])?>\n+                   dans la categorie<?php echo $category['name'])?>\n             </div>\n         </div>\n         <?php endforeach; ?>\n \n"
+                },
+                {
+                    "date": 1677858698366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,10 @@\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n-                        <?php foreach($categories as $category):?>\n-                   dans la categorie<?php echo $category['name'])?>\n+                        <?php foreach($categories as $categorie):?>\n+                   dans la categorie<?php echo $category['name']?>\n             </div>\n         </div>\n         <?php endforeach; ?>\n \n"
+                },
+                {
+                    "date": 1677858704499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n                         <?php foreach($categories as $categorie):?>\n-                   dans la categorie<?php echo $category['name']?>\n+                   dans la categorie<?php echo $categorie['name']?>\n             </div>\n         </div>\n         <?php endforeach; ?>\n \n"
+                },
+                {
+                    "date": 1677859275089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,13 +35,9 @@\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                         <?php endforeach; ?>\n-                        <?php foreach($categories as $categorie):?>\n-                   dans la categorie<?php echo $categorie['name']?>\n-            </div>\n-        </div>\n-        <?php endforeach; ?>\n+                       \n \n \n                     </div>\n                 </div>\n"
+                },
+                {
+                    "date": 1677860768589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         <!-- Post Slider -->\n         <div class=\"posts\">\n             <h1 class=\"posts-title\">Articles</h1>\n             <div class=\"post-container\">\n-               <?php foreach($articles as $post):?>\n+               <?php foreach($articles as $po):?>\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n"
+                },
+                {
+                    "date": 1677860777792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         <!-- Post Slider -->\n         <div class=\"posts\">\n             <h1 class=\"posts-title\">Articles</h1>\n             <div class=\"post-container\">\n-               <?php foreach($articles as $po):?>\n+               <?php foreach($articles as $post):?>\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n"
+                },
+                {
+                    "date": 1677860784999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n+                        <?\n                         <?php endforeach; ?>\n                        \n \n \n"
+                },
+                {
+                    "date": 1677860790353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                        <?\n+                        <?php echo \n                         <?php endforeach; ?>\n                        \n \n \n"
+                },
+                {
+                    "date": 1677860796925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                        <?php echo \n+                        <?php echo $post['name']\n                         <?php endforeach; ?>\n                        \n \n \n"
+                },
+                {
+                    "date": 1677862289234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n      \n  \n      <div class=\"container mt-3\">\n                 <div class=\"button-group\">\n-                    <a href=\"index.php?action=AddPost\" class=\"btn btn-primary\">Ajouter un article</a>\n+                    <a href=\"index.php?action=addArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n                     <a href=\"create.php\" class=\"btn btn-success\">Modifier mon  article</a>\n                     <a href=\"create.php\" class=\"btn btn-danger\">DELETE mon article </a>\n                 </div>\n     <!-- Page Wrapper -->\n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n-                        <?php echo $post['name']\n+                        <?php echo $post['name']?>\n                         <?php endforeach; ?>\n                        \n \n \n"
+                },
+                {
+                    "date": 1677878610509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n-                        <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n+                        <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><\n                         <?php echo $post['name']?>\n                         <?php endforeach; ?>\n                        \n \n"
+                },
+                {
+                    "date": 1677878626304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n-                        <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><\n+                        <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categor</p>\n                         <?php echo $post['name']?>\n                         <?php endforeach; ?>\n                        \n \n"
+                },
+                {
+                    "date": 1677878692571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n-                        <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categor</p>\n+                        <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?>\n                         <?php endforeach; ?>\n                        \n \n"
+                },
+                {
+                    "date": 1677878698270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n-                        <?php echo $post['name']?>\n+                        <?php echo $post['name']?><</P>\n                         <?php endforeach; ?>\n                        \n \n \n"
+                },
+                {
+                    "date": 1677879929297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n  \n      <div class=\"container mt-3\">\n                 <div class=\"button-group\">\n                     <a href=\"index.php?action=addArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n-                    <a href=\"create.php\" class=\"btn btn-success\">Modifier mon  article</a>\n+                    <a href=\"\" class=\"btn btn-success\">Modifier mon  article</a>\n                     <a href=\"create.php\" class=\"btn btn-danger\">DELETE mon article </a>\n                 </div>\n     <!-- Page Wrapper -->\n     <div class=\"page-container\">\n@@ -34,9 +34,9 @@\n                     <div class=\"card-body\">\n                         <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n-                        <?php echo $post['name']?><</P>\n+                        <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n                        \n \n \n"
+                },
+                {
+                    "date": 1677879938972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n  \n      <div class=\"container mt-3\">\n                 <div class=\"button-group\">\n                     <a href=\"index.php?action=addArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n-                    <a href=\"\" class=\"btn btn-success\">Modifier mon  article</a>\n+                    <a href=\"index.php\" class=\"btn btn-success\">Modifier mon  article</a>\n                     <a href=\"create.php\" class=\"btn btn-danger\">DELETE mon article </a>\n                 </div>\n     <!-- Page Wrapper -->\n     <div class=\"page-container\">\n"
+                },
+                {
+                    "date": 1677879944421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n  \n      <div class=\"container mt-3\">\n                 <div class=\"button-group\">\n                     <a href=\"index.php?action=addArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n-                    <a href=\"index.php\" class=\"btn btn-success\">Modifier mon  article</a>\n+                    <a href=\"\" class=\"btn btn-success\">Modifier mon  article</a>\n                     <a href=\"create.php\" class=\"btn btn-danger\">DELETE mon article </a>\n                 </div>\n     <!-- Page Wrapper -->\n     <div class=\"page-container\">\n"
+                },
+                {
+                    "date": 1677879954424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880321857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880332518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"index\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index.php?a\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880389882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"index.php?a\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index.php?action=\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880397712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"index.php?action=\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index.php?action=disp\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880403012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"index.php?action=disp\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index.php?action=display\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880409121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"index.php?action=display\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index.php?action=display&post\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880421982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"index.php?action=display&post\"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index.php?action=display&postid=<?\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677880430056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"container mt3\">\n                     <div class= \"card\" style=\"width:400px\">\n                     <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                     <div class=\"card-body\">\n-                        <h4><a href= \"index.php?action=display&postid=<?= \"><?= $post['title']?></a></h4>     \n+                        <h4><a href= \"index.php?action=display&postid=<?= $\"><?= $post['title']?></a></h4>     \n                         &nbsp;\n                         <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i><p>ECRIT dans la categorie:\n                         <?php echo $post['name']?></p>\n                         <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1677954067619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         <!-- Post Slider -->\n      \n             <h1 class=\"posts-title\">Articles</h1>\n            \n-               <?php foreach($articles as $post:);\n+               <?php foreach($articles as $post:);?\n                 <div class=\"container mx-auto mt-4\">\n   <div class=\"row\">\n     <div class=\"col-md-4\">\n       <div class=\"card\" style=\"width: 18rem;\">\n"
+                }
+            ],
+            "date": 1677858189329,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"fr\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n    <link rel=\"stylesheet\" href=\"public/css/style.css\">\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>\n    <title>Mini | Blog</title>\n</head>\n\n<body>\n     \n \n     <div class=\"container mt-3\">\n                <div class=\"button-group\">\n                    <a href=\"index.php?action=AddPost\" class=\"btn btn-primary\">Ajouter un article</a>\n                    <a href=\"create.php\" class=\"btn btn-success\">Modifier mon  article</a>\n                    <a href=\"create.php\" class=\"btn btn-danger\">DELETE mon article </a>\n                </div>\n    <!-- Page Wrapper -->\n    <div class=\"page-container\">\n\n        <!-- Post Slider -->\n        <div class=\"posts\">\n            <h1 class=\"posts-title\">Articles</h1>\n            <div class=\"post-container\">\n               <?php foreach($articles as $post):?>\n                <div class=\"container mt3\">\n                    <div class= \"card\" style=\"width:400px\">\n                    <img src =\"<?php echo './public/image/'.$post['image']?> \" alt=\"mon image\"  class=\"slider-image\">\n                    <div class=\"card-body\">\n                        <h4><a href= \"#\"><?= $post['title']?></a></h4>     \n                        &nbsp;\n                        <i><?php echo date( 'd F,Y',strtotime($post['created_at']));?></i>\n                    </div>\n                </div>\n                </div>\n                <?php endforeach; ?>\n                \n            </div>\n        </div>\n    \n"
+        }
+    ]
+}

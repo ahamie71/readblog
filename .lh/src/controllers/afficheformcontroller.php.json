@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/controllers/afficheformcontroller.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1678188124330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678188130374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+<?php\n+\n"
+                },
+                {
+                    "date": 1678188172774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,5 @@\n <?php\n-\n+function homePage(){\n+    require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/homepage.phtml');\n+}\n"
+                },
+                {
+                    "date": 1678188182447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <?php\n function homePage(){\n     require_once(dirname(__FILE__, 2) . '/templates/navbar.phtml');\n-    require_once(dirname(__FILE__, 2) . '/templates/Ad.phtml');\n+    require_once(dirname(__FILE__, 2) . '/templates/A.phtml');\n }\n"
+                }
+            ],
+            "date": 1678188124330,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}
